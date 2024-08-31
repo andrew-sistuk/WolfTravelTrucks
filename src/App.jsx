@@ -1,8 +1,17 @@
+import {Route, Routes} from "react-router-dom";
+import Button from "./components/Buttons/Button.jsx";
+
+function onClick() {
+    console.log("clicked");
+}
+
 function App() {
     return (
-        <p>
-            Click on the Vite and React logos to learn more
-        </p>
+        <Routes>
+            <Route path="/" element={<Button to="/" value='Send' onClick={onClick}/>}/>
+            <Route path="*" element={<p>Something went wrong</p>}/>
+        </Routes>
+
     )
 }
 
