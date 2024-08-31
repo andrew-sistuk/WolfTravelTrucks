@@ -1,4 +1,3 @@
-import React from 'react';
 import css from './Buttons.module.css';
 
 function Button({type = 'submit', value, onClick}) {
