@@ -1,0 +1,33 @@
+.user-data {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration-line: underline;
+}
+
+/*.reviews {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*}*/
+
+.location-container {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.location {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}

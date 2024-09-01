@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import css from '../Camper/Camper.module.css';
 import Container from '../../components/Container/Container.jsx';
+import UserRatingData from '../../components/UserRatingData/UserRatingData.jsx';
+import Message from '../../components/Message/Message.jsx';
 
 function Camper() {
   const { id } = useParams();
@@ -21,12 +23,18 @@ function Camper() {
       }
     };
     getItems();
-  }, []);
+  }, [id]);
 
-  const { name } = camper;
+  const { name, reviews, rating, location } = camper;
   return (
     <Container className={css.camper}>
       <h2>{name}</h2>
+      <UserRatingData
+        rating={rating}
+        reviewsCount={reviews.length}
+        location={location}
+      />
+      <Message />
     </Container>
   );
 }

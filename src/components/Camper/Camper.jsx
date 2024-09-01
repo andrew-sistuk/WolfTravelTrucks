@@ -1,19 +1,15 @@
-import css from './Camper.module.css';
 import numeral from 'numeral';
+import ButtonLink from '../Buttons/ButtonLink.jsx';
+import UserRatingData from '../UserRatingData/UserRatingData.jsx';
+
+import css from './Camper.module.css';
+
 import Heart from '../../assets/icons/heart.svg?react';
 import HeartActive from '../../assets/icons/heart-active.svg?react';
-import Map from '../../assets/icons/map.svg?react';
-import ReactStars from 'react-rating-stars-component/dist/react-stars.js';
-import { toast } from 'react-toastify';
-import ButtonLink from '../Buttons/ButtonLink.jsx';
 
 function Camper({ item }) {
   const { id, gallery, name, price, reviews, rating, location, description } =
     item;
-
-  function ratingChanged() {
-    toast('Rating sending');
-  }
 
   return (
     <li className={css.item}>
@@ -30,23 +26,11 @@ function Camper({ item }) {
             )}
           </div>
         </div>
-        <div className={css['user-data']}>
-          <p className={css.rating}>
-            {
-              <ReactStars
-                count={5}
-                onChange={ratingChanged}
-                size={16}
-                activeColor="#ffc531"
-              />
-            }
-            {`${rating} (${reviews.length} reviews)`}
-          </p>
-          <div className={css['location-container']}>
-            <Map width={16} heigth={16} />
-            <p className={css.location}>{location}</p>
-          </div>
-        </div>
+        <UserRatingData
+          rating={rating}
+          reviewsCount={reviews.length}
+          location={location}
+        />
         <p className={css.description}>{description}</p>
         <div className={css.categories}></div>
         <ButtonLink to={id} value="Show more" />

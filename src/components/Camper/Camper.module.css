@@ -59,10 +59,10 @@
   text-decoration-line: underline;
 }
 
-.reviews {
-  display: flex;
-  align-items: center;
-}
+/*.reviews {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*}*/
 
 .location-container {
   display: flex;
