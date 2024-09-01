@@ -1,22 +1,40 @@
 import css from './Header.module.css';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
+import Container from '../Container/Container.jsx';
+import clsx from 'clsx';
+import Logo from '/public/logo.svg?react';
+
+const buildLinkClass = ({ isActive }) => {
+  return clsx(css.navigate, isActive && css.active);
+};
 
 function Header() {
   return (
-    <header>
-      <Link className={css.logo} to="/" />
-      <nav>
-        <ul>
-          <li>
-            <NavLink className={css.navigate} to="/"></NavLink>
-          </li>
+    <>
+      <header>
+        <Container className={css.header}>
+          <Link className={css.logo} to="/">
+            <Logo height={24} />
+          </Link>
+          <nav>
+            <ul className={css['list-links']}>
+              <li>
+                <NavLink className={buildLinkClass} to="/">
+                  Home
+                </NavLink>
+              </li>
 
-          <li>
-            <NavLink className={css.navigate} to="/catalog"></NavLink>
-          </li>
-        </ul>
-      </nav>
-    </header>
+              <li>
+                <NavLink className={buildLinkClass} to="/catalog">
+                  Catalog
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
+        </Container>
+      </header>
+      <Outlet />
+    </>
   );
 }
 

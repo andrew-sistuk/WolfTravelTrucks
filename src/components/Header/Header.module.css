@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: var(--badges);
+}
+
+.logo {
+  position: absolute;
+  height: 24px;
+  top: 24px;
+  left: 64px;
+}
+
+.list-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navigate {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+}
+
+.navigate:hover {
+  color: var(--button-hover);
+}
+
+.active {
+  color: var(--button);
+}

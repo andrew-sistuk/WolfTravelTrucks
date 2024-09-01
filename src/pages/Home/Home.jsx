@@ -1,11 +1,11 @@
-import Layout from '../../components/Layout/Layout.jsx';
-import Header from '../../components/Header/Header.jsx';
+import Container from '../../components/Container/Container.jsx';
+import css from '../../components/Main/Main.module.css';
 
 function Home() {
   return (
-    <Layout>
-      <Header />
-    </Layout>
+    <main>
+      <Container className={css.main}></Container>
+    </main>
   );
 }
 
