@@ -23,7 +23,7 @@ function Catalog() {
       }
     };
     getItems();
-  });
+  }, []);
   return (
     <section>
       <Container className={css.catalog}>

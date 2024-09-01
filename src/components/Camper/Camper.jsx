@@ -5,9 +5,11 @@ import HeartActive from '../../assets/icons/heart-active.svg?react';
 import Map from '../../assets/icons/map.svg?react';
 import ReactStars from 'react-rating-stars-component/dist/react-stars.js';
 import { toast } from 'react-toastify';
+import ButtonLink from '../Buttons/ButtonLink.jsx';
 
 function Camper({ item }) {
-  const { gallery, name, price, reviews, rating, location } = item;
+  const { id, gallery, name, price, reviews, rating, location, description } =
+    item;
 
   function ratingChanged() {
     toast('Rating sending');
@@ -45,6 +47,9 @@ function Camper({ item }) {
             <p className={css.location}>{location}</p>
           </div>
         </div>
+        <p className={css.description}>{description}</p>
+        <div className={css.categories}></div>
+        <ButtonLink to={id} value="Show more" />
       </div>
     </li>
   );
