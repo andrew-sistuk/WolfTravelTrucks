@@ -1,5 +1,5 @@
 import Container from '../../components/Container/Container.jsx';
-import css from '../../components/Main/Main.module.css';
+import css from './Home.module.css';
 
 function Home() {
   return (
