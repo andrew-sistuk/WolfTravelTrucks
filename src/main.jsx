@@ -13,8 +13,12 @@ import { BrowserRouter } from 'react-router-dom';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    {/*<Provider store={appState}>*/}
+    {/*  <PersistGate persistor={persistor}>*/}
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    {/*  </PersistGate>*/}
+    {/*</Provider>*/}
   </StrictMode>
 );

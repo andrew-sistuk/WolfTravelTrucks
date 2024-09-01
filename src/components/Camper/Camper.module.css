@@ -1,0 +1,76 @@
+.item {
+  display: flex;
+  padding: 24px;
+  gap: 24px;
+  border-radius: 20px;
+  border: 1px solid var(--gray-ligth);
+}
+
+.img {
+  width: 292px;
+  height: 320px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+.data {
+  width: 100%;
+}
+
+.main-data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.price-data {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.user-data {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration-line: underline;
+}
+
+.reviews {
+  display: flex;
+  align-items: center;
+}
+
+.location-container {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.location {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
