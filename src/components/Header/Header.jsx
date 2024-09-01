@@ -13,8 +13,8 @@ function Header() {
     <>
       <header>
         <Container className={css.header}>
-          <Link className={css.logo} to="/">
-            <Logo height={24} />
+          <Link className={css['logo-link']} to="/">
+            <Logo className={css.logo} height={24} />
           </Link>
           <nav>
             <ul className={css['list-links']}>

@@ -1,4 +1,41 @@
 .main {
-  height: 200px;
-  background-color: #d84343;
+  padding-top: 260px;
+  padding-bottom: 260px;
+  background-color: var(--gray);
+  background-image: url('../../assets/img/home/background.jpg');
+}
+
+@media screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx),
+  screen and (min-device-pixel-ratio: 2) {
+  .main {
+    background-image: url('../../assets/img/home/background@2x.jpg');
+  }
+}
+
+@media screen and (min-resolution: 288dpi),
+  screen and (min-resolution: 3dppx),
+  screen and (min-device-pixel-ratio: 3) {
+  .main {
+    background-image: url('../../assets/img/home/background@3x.jpg');
+  }
+}
+
+@media screen {
+}
+
+.header {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 0.67;
+  margin-bottom: 16px;
+  color: var(--inputs);
+}
+
+.paragraph {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+  margin-bottom: 40px;
+  color: var(--inputs);
 }

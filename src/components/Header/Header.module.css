@@ -8,11 +8,19 @@
   background-color: var(--badges);
 }
 
-.logo {
+.logo-link {
   position: absolute;
   height: 24px;
   top: 24px;
   left: 64px;
+}
+
+.logo {
+  transition: transform var(--animation);
+}
+
+.logo:hover {
+  transform: scale(1.1);
 }
 
 .list-links {
