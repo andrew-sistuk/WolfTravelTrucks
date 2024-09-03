@@ -10,7 +10,7 @@ function Home() {
         <p className={css.paragraph}>
           You can find everything you want in our catalog
         </p>
-        <ButtonLink to="catalog" value="View Now" />
+        <ButtonLink to="campers" value="View Now" />
       </Container>
     </main>
   );

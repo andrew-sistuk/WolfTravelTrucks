@@ -25,7 +25,7 @@ function Header() {
               </li>
 
               <li>
-                <NavLink className={buildLinkClass} to="/catalog">
+                <NavLink className={buildLinkClass} to="/campers">
                   Catalog
                 </NavLink>
               </li>

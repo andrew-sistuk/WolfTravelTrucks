@@ -1,11 +1,11 @@
 import numeral from 'numeral';
 import ButtonLink from '../Buttons/ButtonLink.jsx';
-import UserRatingData from '../UserRatingData/UserRatingData.jsx';
 
 import css from './Camper.module.css';
 
 import Heart from '../../assets/icons/heart.svg?react';
 import HeartActive from '../../assets/icons/heart-active.svg?react';
+import UserRatingData from '../UserRatingData/UserRatingData.jsx';
 
 function Camper({ item }) {
   const { id, gallery, name, price, reviews, rating, location, description } =
@@ -26,11 +26,7 @@ function Camper({ item }) {
             )}
           </div>
         </div>
-        <UserRatingData
-          rating={rating}
-          reviewsCount={reviews.length}
-          location={location}
-        />
+        <UserRatingData rating={rating} reviews={reviews} location={location} />
         <p className={css.description}>{description}</p>
         <div className={css.categories}></div>
         <ButtonLink to={id} value="Show more" />

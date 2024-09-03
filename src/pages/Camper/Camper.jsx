@@ -1,40 +1,26 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import css from '../Camper/Camper.module.css';
 import Container from '../../components/Container/Container.jsx';
 import UserRatingData from '../../components/UserRatingData/UserRatingData.jsx';
-import Message from '../../components/Message/Message.jsx';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCamper } from '../../redux/camper/operations.js';
+import { selectCamper } from '../../redux/camper/selectors.js';
 
 function Camper() {
   const { id } = useParams();
-  const [camper, setCamper] = useState({});
+  const dispatch = useDispatch();
+  const camper = useSelector(selectCamper);
 
   useEffect(() => {
-    const getItems = async () => {
-      try {
-        const response = await axios.get(
-          `https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers/${id}`
-        );
-        setCamper(response.data);
-        console.log(response.data);
-      } catch (e) {
-        console.log(e.toString());
-      }
-    };
-    getItems();
-  }, [id]);
+    dispatch(fetchCamper(id));
+  }, [id, dispatch]);
 
   const { name, reviews, rating, location } = camper;
   return (
     <Container className={css.camper}>
       <h2>{name}</h2>
-      <UserRatingData
-        rating={rating}
-        reviewsCount={reviews.length}
-        location={location}
-      />
-      <Message />
+      <UserRatingData rating={rating} reviews={reviews} location={location} />
     </Container>
   );
 }
