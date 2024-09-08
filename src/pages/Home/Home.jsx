@@ -1,6 +1,12 @@
-import Container from '../../components/Container/Container.jsx';
+//!react and libraries
+//!styles
 import css from './Home.module.css';
+//!component
 import ButtonLink from '../../components/Buttons/ButtonLink.jsx';
+import Container from '../../сontainers/Container/Container.jsx';
+//!helpers
+//!assets
+//!myRedux
 
 function Home() {
   return (

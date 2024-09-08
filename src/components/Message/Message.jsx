@@ -1,7 +1,11 @@
-import { ToastContainer } from 'react-toastify';
+//!react and libraries
+import { ToastContainer } from 'react-toastify'; //!styles
 import 'react-toastify/dist/ReactToastify.css';
-
-import css from './Message.module.css';
+import css from './Message.module.css'; //!component
+//!component
+//!helpers
+//!assets
+//!myRedux
 
 export default function Message() {
   return (

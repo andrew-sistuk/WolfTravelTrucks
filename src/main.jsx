@@ -13,7 +13,7 @@ import './index.css';
 import 'modern-normalize';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { appState } from './redux/store.js';
+import { appState } from './myRedux/store.js';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

@@ -1,8 +1,14 @@
-import css from './Header.module.css';
-import { Link, NavLink, Outlet } from 'react-router-dom';
-import Container from '../Container/Container.jsx';
+//!react and libraries
 import clsx from 'clsx';
+import { Link, NavLink, Outlet } from 'react-router-dom'; //!styles
+import css from './Header.module.css'; //!component
+import Container from '../../сontainers/Container/Container.jsx';
 import Logo from '/public/logo.svg?react';
+import Modal from '../Modal/Modal.jsx';
+import Message from '../Message/Message.jsx'; //!helpers
+//!helpers
+//!assets
+//!myRedux
 
 const buildLinkClass = ({ isActive }) => {
   return clsx(css.navigate, isActive && css.active);
@@ -34,6 +40,8 @@ function Header() {
         </Container>
       </header>
       <Outlet />
+      <Modal />
+      <Message />
     </>
   );
 }

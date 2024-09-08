@@ -1,0 +1,50 @@
+.comments {
+  flex: 1 1 0;
+}
+
+.comment {
+  margin-bottom: 44px;
+}
+
+.details {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--badges);
+}
+
+.letter {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+  color: var(--button);
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text, #475467);
+}

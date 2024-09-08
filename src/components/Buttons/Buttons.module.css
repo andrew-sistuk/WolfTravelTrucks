@@ -1,18 +1,19 @@
 .button {
-    display: inline-block;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: -0.005em;
-    padding: 16px 60px;
-    border-radius: 200px;
-    color: var(--white);
-    background-color: var(--button);
-    border: transparent;
-    outline: transparent;
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+  padding: 16px 60px;
+  border-radius: 200px;
+  color: var(--white);
+  background-color: var(--button);
+  border: transparent;
+  outline: transparent;
+  align-self: center;
 }
 
 .button:hover,
 .button:focus {
-    background-color: var(--button-hover);
+  background-color: var(--button-hover);
 }

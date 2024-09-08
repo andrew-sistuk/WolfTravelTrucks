@@ -1,5 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
-// import {
+import { configureStore } from '@reduxjs/toolkit'; // import {
 //   FLUSH,
 //   PAUSE,
 //   PERSIST,
@@ -7,15 +6,12 @@ import { configureStore } from '@reduxjs/toolkit';
 //   PURGE,
 //   REGISTER,
 //   REHYDRATE,
-// } from 'redux-persist';
+// } from 'myRedux-persist';
 import campersSlice from './campers/slice';
-import camperSlice from './camper/slice';
 
 export const appState = configureStore({
   reducer: {
     campers: campersSlice,
-    camper: camperSlice,
-
     // filters: filtersSlice,
   },
   // middleware: getDefaultMiddleware =>

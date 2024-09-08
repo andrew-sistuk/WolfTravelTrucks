@@ -1,5 +1,11 @@
+//!react and libraries
+//!styles
 import css from '../../pages/Catalog/Catalog.module.css';
+//!component
 import Button from '../Buttons/Button.jsx';
+//!helpers
+//!assets
+//!myRedux
 
 function Filters({ onClick }) {
   return (

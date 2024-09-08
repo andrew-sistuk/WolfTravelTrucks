@@ -1,5 +1,9 @@
-// Loader.jsx
+//!react and libraries
+//!styles
 import css from './Loader.module.css';
+//!component
+//!helpers
+//!myRedux
 
 const Loader = () => (
   <div className={css.loader}>

@@ -1,0 +1,5 @@
+.details {
+  display: flex;
+  gap: 40px;
+  padding-top: 44px;
+}

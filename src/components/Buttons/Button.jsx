@@ -1,4 +1,10 @@
+//!react and libraries
+//!styles
 import css from './Buttons.module.css';
+//!component
+//!helpers
+//!assets
+//!myRedux
 
 function Button({ type = 'submit', value, onClick }) {
   return (

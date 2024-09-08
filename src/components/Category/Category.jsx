@@ -1,4 +1,10 @@
+//!react and libraries
+//!styles
 import css from './Category.module.css';
+//!component
+//!helpers
+//!assets
+//!myRedux
 
 function Category({ Icon, text }) {
   return (

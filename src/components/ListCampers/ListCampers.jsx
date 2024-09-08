@@ -1,7 +1,13 @@
-import css from './ListCampers.module.css';
-import Camper from '../Camper/Camper.jsx';
+//!react and libraries
 import { useSelector } from 'react-redux';
-import { selectCampers } from '../../redux/campers/selectors.js';
+//!styles
+import css from './ListCampers.module.css';
+//!component
+import Camper from '../Camper/Camper.jsx';
+//!helpers
+//!assets
+//!myRedux
+import { selectCampers } from '../../myRedux/campers/selectors.js';
 
 function ListCampers() {
   const campers = useSelector(selectCampers);
