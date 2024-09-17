@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { Link, NavLink, Outlet } from 'react-router-dom'; //!styles
 import css from './Header.module.css'; //!component
 import Container from '../../сontainers/Container/Container.jsx';
-import Logo from '/public/logo.svg?react';
+import Logo from '/src/assets/icons/logo.svg?react';
 import Modal from '../Modal/Modal.jsx';
 import Message from '../Message/Message.jsx'; //!helpers
 //!helpers

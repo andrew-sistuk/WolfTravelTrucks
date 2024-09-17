@@ -13,8 +13,8 @@ function ListCampers() {
   const campers = useSelector(selectCampers);
   return (
     <ul className={css['list-cars']}>
-      {campers.map(item => (
-        <Camper key={item.id} item={item} />
+      {campers.map(camper => (
+        <Camper key={camper.id} camper={camper} />
       ))}
     </ul>
   );

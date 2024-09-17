@@ -28,9 +28,6 @@ function Camper() {
 
   const { name, reviews, rating, location, price, gallery, description } =
     camper;
-  console.log('camper', gallery);
-
-  // const modal = useSelector(selectModal);
 
   function handleClick(photo) {
     dispatch(

@@ -8,7 +8,7 @@ export const selectCamperReviews = state => state.campers.item.reviews;
 
 export const selectModal = state => state.campers.modal;
 
-export const selectModalIsOpen = state => state.campers.modal.isOpen;
+export const selectLocations = state => state.campers.filters.locations;
 
 export const selectCampersLoading = state => state.campers.loading;
 

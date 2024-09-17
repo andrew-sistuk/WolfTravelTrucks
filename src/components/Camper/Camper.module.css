@@ -12,9 +12,14 @@
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 10px;
+  background-color: var(--gray-ligth);
 }
 
 .data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
   width: 100%;
 }
 

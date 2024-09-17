@@ -1,14 +1,41 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchCamper, fetchCampers } from './operations';
 import addId from '../../helpers/addId.js';
+import ownPropertyList from '../../helpers/ownProperty.js';
 
 const handlePending = state => {
   state.loading = true;
+  state.item = {
+    gallery: [],
+    reviews: [],
+  };
+  state.modal = {
+    isOpen: false,
+    type: 'photo',
+    photo: null,
+  };
+  state.filters = {
+    equipment: [],
+    locations: [],
+  };
 };
 
 const handleRejected = (state, action) => {
   state.loading = false;
   state.error = action.payload;
+  state.item = {
+    gallery: [],
+    reviews: [],
+  };
+  state.modal = {
+    isOpen: false,
+    type: 'photo',
+    photo: null,
+  };
+  state.filters = {
+    equipment: [],
+    locations: [],
+  };
 };
 
 const campersSlice = createSlice({
@@ -24,6 +51,10 @@ const campersSlice = createSlice({
       type: 'photo',
       photo: null,
     },
+    filters: {
+      equipment: [],
+      locations: [],
+    },
     loading: false,
     error: null,
   },
@@ -38,7 +69,32 @@ const campersSlice = createSlice({
       .addCase(fetchCampers.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
-        state.items = action.payload;
+        const tempItems = action.payload;
+        let tempObjWithFullProperties = {};
+
+        for (let item of tempItems) {
+          tempObjWithFullProperties = { ...tempObjWithFullProperties, ...item };
+          if (
+            !state.filters.locations.some(
+              location => location.label === item.location
+            )
+          ) {
+            state.filters.locations.push({
+              value: item.location
+                .replace(/ /g, '_')
+                .replace(',', '')
+                .toLowerCase(),
+              label: item.location,
+            });
+          }
+        }
+
+        state.filters.equipment = ownPropertyList(
+          tempObjWithFullProperties,
+          'equipment_filter'
+        );
+
+        state.items = tempItems;
       })
       .addCase(fetchCampers.rejected, handleRejected)
 
