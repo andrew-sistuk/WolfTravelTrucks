@@ -1,6 +1,5 @@
 //!react and libraries
 import Select, { components } from 'react-select';
-// import makeAnimated from 'react-select/animated';
 //!styles
 import css from './Filters.module.css';
 //!component
@@ -9,13 +8,17 @@ import Button from '../Buttons/Button.jsx';
 //!assets
 import Map from '../../assets/icons/map.svg?react';
 //!myRedux
-import { selectLocations } from '../../myRedux/campers/selectors.js';
+import {
+  selectEquipment,
+  selectLocations,
+} from '../../myRedux/campers/selectors.js';
 import { useSelector } from 'react-redux';
 import { selectStyles } from './selectStyles.js';
+import RadioButton from '../RadioButton/RadioButton.jsx';
 
 function Filters({ onClick }) {
-  // const animatedComponents = makeAnimated();
   const locations = useSelector(selectLocations);
+  const equipment = useSelector(selectEquipment);
 
   const CustomPlaceholder = props => (
     <components.Placeholder {...props}>
@@ -52,27 +55,14 @@ function Filters({ onClick }) {
       />
       <label className={css['label-filters']}>Filters</label>
       <h4>Vehicle equipment</h4>
+      <ul>
+        {equipment.map(([id, text]) => (
+          <li key={id}>
+            <RadioButton text={text} />
+          </li>
+        ))}
+      </ul>
 
-      <label htmlFor="">
-        <input type="radio" name="equipment" value="ac" />
-        AC
-      </label>
-      <label htmlFor="">
-        <input type="radio" name="equipment" value="automatic" />
-        Automatic
-      </label>
-      <label htmlFor="">
-        <input type="radio" name="equipment" value="kitchen" />
-        Kitchen
-      </label>
-      <label htmlFor="">
-        <input type="radio" name="equipment" value="tv" />
-        TV
-      </label>
-      <label htmlFor="">
-        <input type="radio" name="equipment" value="bathroom" />
-        Bathroom
-      </label>
       <h4>Vehicle type</h4>
       <label htmlFor="">
         <input type="radio" name="type" value="van" />

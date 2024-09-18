@@ -1,4 +1,5 @@
 import React from 'react';
+import css from './RadioButton.module.css';
 
 function RadioButton({ Icon, text }) {
   return (
@@ -6,7 +7,7 @@ function RadioButton({ Icon, text }) {
       <input type="radio" name="" id="" />
       <div>
         {/*<Icon />*/}
-        <p>{text}</p>
+        <p className={css.text}>{text}</p>
       </div>
     </label>
   );
