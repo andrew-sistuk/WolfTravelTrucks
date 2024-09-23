@@ -10,7 +10,10 @@ import ListCampers from '../../components/ListCampers/ListCampers.jsx'; //!helpe
 import { useDispatch } from 'react-redux';
 import { fetchCampers } from '../../myRedux/campers/operations.js';
 
-function handleClick() {}
+function handleSubmit(event) {
+  console.log(event);
+  event.preventDefault();
+}
 
 function Catalog() {
   const dispatch = useDispatch();
@@ -23,7 +26,7 @@ function Catalog() {
     <section>
       <h2 className="visually-hidden">Catalog</h2>
       <Container className={css.catalog}>
-        <Filters onClick={handleClick} />
+        <Filters onSubmit={handleSubmit} />
         <ListCampers />
       </Container>
       <Message />

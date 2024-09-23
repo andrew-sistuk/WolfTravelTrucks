@@ -8,7 +8,7 @@ import ownPropertyList from '../../helpers/ownProperty.js';
 import {useSelector} from 'react-redux';
 import {selectCamper} from '../../myRedux/campers/selectors.js';
 import {nanoid} from 'nanoid';
-import CategoryList from '../../components/CategoryList/CategoryList.jsx'; //!helpers
+import EquipmentList from '../../components/EquipmentList/EquipmentList.jsx'; //!helpers
 //!helpers
 //!assets
 //!myRedux
@@ -18,7 +18,7 @@ function Features() {
   return (
     <Details header="Features">
       <div className={css.features}>
-        <CategoryList categories={ownPropertyList(camper, 'equipment')} />
+        <EquipmentList categories={ownPropertyList(camper, 'equipment')} />
         <div>
           <h2 className={css.vehicle}>Vehicle details</h2>
           <ul className={css.details}>

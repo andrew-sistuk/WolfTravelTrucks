@@ -39,3 +39,41 @@
   margin-bottom: 32px;
   color: var(--text, #475467);
 }
+
+.set {
+  margin: 0;
+  padding: 0;
+  border: none;
+  min-width: 0;
+}
+
+.header-set {
+  margin: 0 0 24px 0;
+  padding: 0 0 24px 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--gray-ligth);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.list-filters {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 12px;
+  column-gap: 8px;
+  max-width: 360px;
+}
+
+.relative-container {
+  position: relative;
+}
+
+.equipment {
+  margin-bottom: 32px;
+}
+
+.type {
+  margin-bottom: 40px;
+}

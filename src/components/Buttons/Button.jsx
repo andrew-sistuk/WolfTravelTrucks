@@ -6,9 +6,9 @@ import css from './Buttons.module.css';
 //!assets
 //!myRedux
 
-function Button({ type = 'submit', value, onClick }) {
+function Button({ type = 'submit', value, onClick, form }) {
   return (
-    <button className={css.button} type={type} onClick={onClick}>
+    <button className={css.button} type={type} onClick={onClick} form={form}>
       {value}
     </button>
   );

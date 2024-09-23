@@ -1,18 +1,20 @@
 //!react and libraries
 //!styles
-import css from './Category.module.css';
+import css from './Equipment.module.css';
 //!component
 //!helpers
 //!assets
 //!myRedux
 
-function Category({ Icon, text }) {
+function Equipment({ Icon, text }) {
   return (
-    <div className={css.category}>
+    <>
       {Icon && <Icon className={css.icon} />}
       <p className={css.text}>{text}</p>
-    </div>
+    </>
+    // <div className={css.category}>
+    // </div>
   );
 }
 
-export default Category;
+export default Equipment;

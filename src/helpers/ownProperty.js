@@ -7,7 +7,7 @@ export default function ownPropertyList(obj, type = 'equipment') {
     if (
       typeof obj[property] === 'function' ||
       typeof obj[property] === 'object' ||
-      !obj.hasOwnProperty(property) ||
+      !Object.prototype.hasOwnProperty.call(obj, property) ||
       basePropertyList.includes(property)
     ) {
       continue;
@@ -20,7 +20,7 @@ export default function ownPropertyList(obj, type = 'equipment') {
         }
         break;
       case 'equipment_filter':
-        if (typeof obj[property] !== 'boolean') {
+        if (typeof obj[property] === 'boolean') {
           propertyList.push([nanoid(), property]);
         }
         break;

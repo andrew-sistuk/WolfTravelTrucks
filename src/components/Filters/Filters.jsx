@@ -9,16 +9,21 @@ import Button from '../Buttons/Button.jsx';
 import Map from '../../assets/icons/map.svg?react';
 //!myRedux
 import {
-  selectEquipment,
+  selectEquipments,
   selectLocations,
+  selectTypes,
 } from '../../myRedux/campers/selectors.js';
 import { useSelector } from 'react-redux';
 import { selectStyles } from './selectStyles.js';
-import RadioButton from '../RadioButton/RadioButton.jsx';
+import FilterItem from '../FilterItem/FilterItem.jsx';
+import clsx from 'clsx';
+import { EquipmentIcons } from '../../helpers/constants/EquipmentIcons.jsx';
+import { TypeIcons } from '../../helpers/constants/TypeIcons.jsx';
 
-function Filters({ onClick }) {
+function Filters({ onSubmit }) {
   const locations = useSelector(selectLocations);
-  const equipment = useSelector(selectEquipment);
+  const equipments = useSelector(selectEquipments);
+  const types = useSelector(selectTypes);
 
   const CustomPlaceholder = props => (
     <components.Placeholder {...props}>
@@ -30,7 +35,7 @@ function Filters({ onClick }) {
   );
 
   return (
-    <form className={css.filters}>
+    <form className={css.filters} onSubmit={onSubmit} id="filters">
       <label className={css['label-location']} htmlFor="location">
         Location
       </label>
@@ -41,8 +46,8 @@ function Filters({ onClick }) {
           borderRadius: 0,
           colors: {
             ...theme.colors,
-            primary25: '#d84343',
-            primary: '#d84343',
+            primary25: '#E44848',
+            primary: '#E44848',
           },
         })}
         isMulti
@@ -52,31 +57,41 @@ function Filters({ onClick }) {
         options={locations}
         components={{ Placeholder: CustomPlaceholder }}
         placeholder="Search..."
+        name="location"
+        form="filters"
       />
       <label className={css['label-filters']}>Filters</label>
-      <h4>Vehicle equipment</h4>
-      <ul>
-        {equipment.map(([id, text]) => (
-          <li key={id}>
-            <RadioButton text={text} />
-          </li>
-        ))}
-      </ul>
-
-      <h4>Vehicle type</h4>
-      <label htmlFor="">
-        <input type="radio" name="type" value="van" />
-        Van
-      </label>
-      <label htmlFor="">
-        <input type="radio" name="type" value="fullyIntegrated" />
-        Fully Integrated
-      </label>
-      <label htmlFor="">
-        <input type="radio" name="type" value="alcove" />
-        Alcove
-      </label>
-      <Button type="submit" value="Search" onClick={onClick}></Button>
+      <fieldset className={clsx(css.set, css.equipment)}>
+        <legend className={css['header-set']}>Vehicle equipment</legend>
+        <ul className={css['list-filters']}>
+          {equipments.map(([id, value]) => (
+            <li className={css['relative-container']} key={id}>
+              <FilterItem
+                Icon={value && EquipmentIcons[value.toLowerCase()]}
+                value={value}
+                type="checkbox"
+                name="equipment"
+              />
+            </li>
+          ))}
+        </ul>
+      </fieldset>
+      <fieldset className={clsx(css.set, css.type)}>
+        <legend className={css['header-set']}>Vehicle type</legend>
+        <ul className={css['list-filters']}>
+          {types.map(([id, value]) => (
+            <li className={css['relative-container']} key={id}>
+              <FilterItem
+                Icon={value && TypeIcons[value]}
+                value={value}
+                type="radio"
+                name="type"
+              />
+            </li>
+          ))}
+        </ul>
+      </fieldset>
+      <Button type="submit" value="Search" form="filters" />
     </form>
   );
 }

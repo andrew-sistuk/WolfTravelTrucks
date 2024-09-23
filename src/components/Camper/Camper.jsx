@@ -8,10 +8,10 @@ import Heart from '../../assets/icons/heart.svg?react';
 import HeartActive from '../../assets/icons/heart-active.svg?react';
 //!helpers
 import convertPrice from '../../helpers/convertPrice.js';
-import CategoryList from '../CategoryList/CategoryList.jsx';
+import EquipmentList from '../EquipmentList/EquipmentList.jsx';
 import ownPropertyList from '../../helpers/ownProperty.js';
 //!assets
-import DefaultImg from '/favicon.webp';
+import DefaultImg from '../../assets/img/404.jpg';
 
 //!myRedux
 
@@ -25,6 +25,7 @@ function Camper({ camper }) {
         className={css.img}
         src={gallery[0] ? gallery[0].thumb : DefaultImg}
         alt={name}
+        loading="lazy"
       />
       <div className={css.data}>
         <div>
@@ -46,7 +47,7 @@ function Camper({ camper }) {
             to={`${id}\\reviews`}
           />
           <p className={css.description}>{description}</p>
-          <CategoryList categories={ownPropertyList(camper, 'equipment')} />
+          <EquipmentList categories={ownPropertyList(camper, 'equipment')} />
         </div>
         <ButtonLink to={id} value="Show more" />
       </div>

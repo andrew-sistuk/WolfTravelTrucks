@@ -1,0 +1,41 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 112px;
+  height: 96px;
+  padding: 16px 12px;
+  border-radius: 12px;
+  mix-blend-mode: multiply;
+  border: 1px solid var(--gray-ligth, #dadde1);
+}
+
+.container:focus,
+.container:hover {
+  border-color: var(--button, #e44848);
+}
+
+.checkbox {
+  position: absolute;
+  visibility: hidden;
+  top: 60px;
+  left: 45px;
+  z-index: -99;
+}
+
+.checkbox:checked + .container {
+  border-color: var(--button, #e44848);
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.text {
+  text-transform: capitalize;
+  text-align: center;
+}
