@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  max-height: 104px;
+  overflow: hidden;
+  /*overflow-y: auto; */
+  /*overflow-x: hidden;*/
   margin-bottom: 24px;
 }
 

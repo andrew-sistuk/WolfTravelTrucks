@@ -10,9 +10,10 @@ import ListCampers from '../../components/ListCampers/ListCampers.jsx'; //!helpe
 import { useDispatch } from 'react-redux';
 import { fetchCampers } from '../../myRedux/campers/operations.js';
 
-function handleSubmit(event) {
+function handleSubmit(event, form) {
   console.log(event);
   event.preventDefault();
+  form.reset();
 }
 
 function Catalog() {

@@ -22,14 +22,12 @@ const emptyFilters = {
 };
 
 const handlePending = state => {
-  state.loading = true;
   state.item = emptyItem;
   state.modal = emptyModal;
   state.filters = emptyFilters;
 };
 
 const handleRejected = (state, action) => {
-  state.loading = false;
   state.error = action.payload;
   state.item = emptyItem;
   state.modal = emptyModal;
@@ -43,7 +41,6 @@ const campersSlice = createSlice({
     item: emptyItem,
     modal: emptyModal,
     filters: emptyFilters,
-    loading: false,
     error: null,
   },
   reducers: {
