@@ -1,7 +1,7 @@
 import css from './FilterItem.module.css';
 import { splitCamelCase } from '../../helpers/splitCamelCase.js';
 
-function FilterItem({ Icon, value, type, name }) {
+function FilterItem({ Icon, value, type, name, register }) {
   return (
     <>
       <input
@@ -10,6 +10,7 @@ function FilterItem({ Icon, value, type, name }) {
         name={name}
         id={value}
         value={value}
+        {...register(name)}
       />
       <label className={css.container} htmlFor={value}>
         {Icon && <Icon className={css.icon} width={32} height={32} />}

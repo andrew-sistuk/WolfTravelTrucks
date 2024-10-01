@@ -13,16 +13,17 @@ import './index.css';
 import 'modern-normalize';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { appState } from './myRedux/store.js';
+import { appState, persistor } from './myRedux/store.js';
+import { PersistGate } from 'redux-persist/integration/react';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={appState}>
-      {/*  <PersistGate persistor={persistor}>*/}
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-      {/*  </PersistGate>*/}
+      <PersistGate persistor={persistor}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </PersistGate>
     </Provider>
   </StrictMode>
 );

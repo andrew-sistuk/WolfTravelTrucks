@@ -22,6 +22,8 @@ const emptyFilters = {
 };
 
 const handlePending = state => {
+  state.items = [];
+  state.favorites = [];
   state.item = emptyItem;
   state.modal = emptyModal;
   state.filters = emptyFilters;
@@ -29,6 +31,8 @@ const handlePending = state => {
 
 const handleRejected = (state, action) => {
   state.error = action.payload;
+  state.items = [];
+  state.favorites = [];
   state.item = emptyItem;
   state.modal = emptyModal;
   state.filters = emptyFilters;
@@ -39,6 +43,7 @@ const campersSlice = createSlice({
   initialState: {
     items: [],
     item: emptyItem,
+    favorites: [],
     modal: emptyModal,
     filters: emptyFilters,
     error: null,
@@ -47,6 +52,7 @@ const campersSlice = createSlice({
     toggleModal: (state, action) => {
       state.modal = action.payload;
     },
+    toggleFavorite: (state, action) => {},
   },
   extraReducers: builder => {
     builder

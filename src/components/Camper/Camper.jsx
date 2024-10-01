@@ -12,12 +12,17 @@ import EquipmentList from '../EquipmentList/EquipmentList.jsx';
 import ownPropertyList from '../../helpers/ownProperty.js';
 //!assets
 import DefaultImg from '../../assets/img/404.jpg';
+import {useDispatch, useSelector} from 'react-redux';
+import {toggleFavorite} from '../../myRedux/favorites/slice.js';
+import {selectFavorites} from '../../myRedux/favorites/selectors.js';
 
 //!myRedux
 
 function Camper({ camper }) {
   const { id, gallery, name, price, reviews, rating, location, description } =
     camper;
+  const dispatch = useDispatch();
+  const favorites = useSelector(selectFavorites);
 
   return (
     <li className={css.item} key={id}>
@@ -33,11 +38,17 @@ function Camper({ camper }) {
             <h3 className={css.header}>{name}</h3>
             <div className={css['price-data']}>
               <p className={css.price}>{convertPrice(price)}</p>
-              {name ? (
-                <Heart width={24} heigth={24} />
-              ) : (
-                <HeartActive width={24} heigth={24} />
-              )}
+              <button
+                className={css.heart}
+                type="button"
+                onClick={() => dispatch(toggleFavorite(id))}
+              >
+                {favorites[id] ? (
+                  <HeartActive width={24} heigth={24} />
+                ) : (
+                  <Heart width={24} heigth={24} />
+                )}
+              </button>
             </div>
           </div>
           <UserRatingData

@@ -1,14 +1,21 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { selectContacts } from '../contacts/selectors';
+import { selectCampers } from '../campers/selectors';
 
-export const selectNameFilter = state => state.filters.name;
+export const selectFilterType = state => state.filters.type;
+export const selectFilterEquipments = state => state.filters.equipments;
+export const selectFilterLocations = state => state.filters.locations;
 
-export const selectFilteredContacts = createSelector(
-  [selectContacts, selectNameFilter],
-  (items, filterName) =>
+export const selectFilteredCampers = createSelector(
+  [
+    selectCampers,
+    selectFilterType,
+    selectFilterEquipments,
+    selectFilterLocations,
+  ],
+  (items, type, equipments, locations) =>
     items.filter(
-      item =>
-        item.name.toLowerCase().includes(filterName.toLowerCase().trim()) ||
-        item.number.includes(filterName.toLowerCase().trim())
+      item => item.form.toLowerCase().includes(type.toLowerCase().trim())
+      //   &&
+      // isLocation(item, locations)
     )
 );

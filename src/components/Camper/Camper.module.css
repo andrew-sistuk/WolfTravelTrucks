@@ -47,6 +47,14 @@
   align-items: center;
 }
 
+.heart {
+  background: transparent;
+  border: transparent;
+  outline: transparent;
+  margin: 0;
+  padding: 0;
+}
+
 .user-data {
   display: flex;
   gap: 16px;

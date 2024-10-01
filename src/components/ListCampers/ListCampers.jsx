@@ -7,10 +7,11 @@ import Camper from '../Camper/Camper.jsx';
 //!helpers
 //!assets
 //!myRedux
-import { selectCampers } from '../../myRedux/campers/selectors.js';
+// import { selectCampers } from '../../myRedux/campers/selectors.js';
+import { selectFilteredCampers } from '../../myRedux/filters/selectors.js';
 
 function ListCampers() {
-  const campers = useSelector(selectCampers);
+  const campers = useSelector(selectFilteredCampers);
   return (
     <ul className={css['list-cars']}>
       {campers.map(camper => (
