@@ -29,6 +29,8 @@ export default function ownPropertyList(obj, type = 'equipment') {
           propertyList.push([nanoid(), property, obj[property]]);
         }
         break;
+      case 'count':
+        if (obj[property]) propertyList.push(property);
     }
   }
   return propertyList;

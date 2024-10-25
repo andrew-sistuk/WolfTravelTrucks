@@ -1,4 +1,5 @@
 //!react and libraries
+import clsx from 'clsx';
 //!styles
 import css from './Buttons.module.css';
 //!component
@@ -6,9 +7,14 @@ import css from './Buttons.module.css';
 //!assets
 //!myRedux
 
-function Button({ type = 'submit', value, onClick, form }) {
+function Button({ type = 'submit', value, onClick, form, style }) {
   return (
-    <button className={css.button} type={type} onClick={onClick} form={form}>
+    <button
+      className={clsx(css.button, style)}
+      type={type}
+      onClick={onClick}
+      form={form}
+    >
       {value}
     </button>
   );

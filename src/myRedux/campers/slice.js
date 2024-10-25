@@ -21,9 +21,8 @@ const emptyFilters = {
   types: [],
 };
 
-const handlePending = state => {
+const handleDefaultProperties = state => {
   state.items = [];
-  state.favorites = [];
   state.item = emptyItem;
   state.modal = emptyModal;
   state.filters = emptyFilters;
@@ -31,11 +30,7 @@ const handlePending = state => {
 
 const handleRejected = (state, action) => {
   state.error = action.payload;
-  state.items = [];
-  state.favorites = [];
-  state.item = emptyItem;
-  state.modal = emptyModal;
-  state.filters = emptyFilters;
+  handleDefaultProperties(state);
 };
 
 const campersSlice = createSlice({
@@ -43,7 +38,6 @@ const campersSlice = createSlice({
   initialState: {
     items: [],
     item: emptyItem,
-    favorites: [],
     modal: emptyModal,
     filters: emptyFilters,
     error: null,
@@ -52,15 +46,14 @@ const campersSlice = createSlice({
     toggleModal: (state, action) => {
       state.modal = action.payload;
     },
-    toggleFavorite: (state, action) => {},
   },
   extraReducers: builder => {
     builder
-      .addCase(fetchCampers.pending, handlePending)
+      .addCase(fetchCampers.pending, handleDefaultProperties)
       .addCase(fetchCampers.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
-        const tempItems = action.payload;
+        const tempItems = action.payload.items;
         let tempObjWithFullProperties = {};
         let tempTypes = [];
 
@@ -98,7 +91,7 @@ const campersSlice = createSlice({
       })
       .addCase(fetchCampers.rejected, handleRejected)
 
-      .addCase(fetchCamper.pending, handlePending)
+      .addCase(fetchCamper.pending, handleDefaultProperties)
       .addCase(fetchCamper.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;

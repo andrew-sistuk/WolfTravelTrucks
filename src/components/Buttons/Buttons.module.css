@@ -10,7 +10,7 @@
   background-color: var(--button);
   border: transparent;
   outline: transparent;
-  align-self: center;
+  align-self: flex-start;
 }
 
 .button:hover,

@@ -18,22 +18,45 @@ import { TypeIcons } from '../../helpers/constants/TypeIcons.jsx';
 import Map from '../../assets/icons/map.svg?react';
 //!myRedux
 import {
+  selectCamperLocations,
   selectEquipments,
-  selectLocations,
   selectTypes,
 } from '../../myRedux/campers/selectors.js';
+
+import {
+  selectFilterEquipments,
+  selectFilterLocations,
+  selectFilterType,
+} from '../../myRedux/filters/selectors.js';
 import { filterCampers } from '../../myRedux/filters/slice.js';
+import { defaultPerPage } from '../../myRedux/pagination/slice.js';
+import { useState } from 'react';
 
 function Filters() {
-  const locations = useSelector(selectLocations);
+  const locations = useSelector(selectCamperLocations);
   const equipments = useSelector(selectEquipments);
   const types = useSelector(selectTypes);
+
+  const defaultLocations = useSelector(selectFilterLocations);
+  const defaultEquipments = useSelector(selectFilterEquipments);
+  const defaultType = useSelector(selectFilterType);
+
   const dispatch = useDispatch();
 
-  const { register, control, handleSubmit } = useForm();
+  const [test, setTest] = useState(0);
+
+  const { register, control, handleSubmit, watch, setValue } = useForm({
+    defaultValues: {
+      location: defaultLocations,
+      equipments: defaultEquipments,
+      type: defaultType,
+    },
+    shouldUnregister: true,
+  });
 
   function onSubmit(form) {
     dispatch(filterCampers(form));
+    dispatch(defaultPerPage());
     console.log(form);
   }
 
@@ -52,9 +75,19 @@ function Filters() {
       onSubmit={handleSubmit(onSubmit)}
       id="filters"
     >
-      <label className={css['label-location']} htmlFor="location">
+      <label
+        className={css['label-location']}
+        data-tooltip-id="my-tooltip-locations"
+        htmlFor="location"
+      >
         Location
       </label>
+      <ReactTooltip
+        id="my-tooltip-locations"
+        variant="dark"
+        place="right-end"
+        content="Check locations would you want search"
+      />
       <Controller
         name="location"
         control={control}
@@ -71,6 +104,7 @@ function Filters() {
                 primary: '#E44848',
               },
             })}
+            // defaultValue={locations}
             isMulti
             isClearable
             isSearchable
@@ -84,7 +118,18 @@ function Filters() {
         )}
       />
 
-      <label className={css['label-filters']}>Filters</label>
+      <label
+        className={css['label-filters']}
+        data-tooltip-id="my-tooltip-filters"
+      >
+        Filters
+      </label>
+      <ReactTooltip
+        id="my-tooltip-filters"
+        variant="dark"
+        place="right-end"
+        content="Check filters would you want search"
+      />
       <fieldset className={clsx(css.set, css.equipment)}>
         <legend
           className={css['header-set']}
@@ -110,7 +155,7 @@ function Filters() {
         id="my-tooltip-equipment"
         variant="dark"
         place="right-end"
-        content="Check all equipment would you want search"
+        content="Check one or more equipment"
       />
       <fieldset className={clsx(css.set, css.type)}>
         <legend className={css['header-set']} data-tooltip-id="my-tooltip-type">
@@ -125,6 +170,9 @@ function Filters() {
                 type="radio"
                 name="type"
                 register={register}
+                onChange={() => {
+                  setValue('type', watch('type') === value ? null : value);
+                }}
               />
             </li>
           ))}
@@ -134,7 +182,7 @@ function Filters() {
         id="my-tooltip-type"
         variant="dark"
         place="right-end"
-        content="Check type would you want search"
+        content="Check type camper"
       />
       <Button type="submit" value="Search" form="filters" />
     </form>

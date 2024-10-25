@@ -162,7 +162,7 @@ function BookForm() {
         place="top-end"
         content="You can write some specific information here"
       />
-      <Button value="Send" type="submit" />
+      <Button value="Send" type="submit" style={css.button} />
     </form>
   );
 }

@@ -13,6 +13,7 @@ import storage from 'redux-persist/lib/storage';
 import campersSlice from './campers/slice';
 import filtersSlice from './filters/slice.js';
 import favoritesSlice from './favorites/slice.js';
+import paginationSlice from './pagination/slice.js';
 
 const favoritesConfig = {
   key: 'favorites',
@@ -26,6 +27,7 @@ export const appState = configureStore({
     campers: campersSlice,
     filters: filtersSlice,
     favorites: favoritesReducer,
+    pagination: paginationSlice,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

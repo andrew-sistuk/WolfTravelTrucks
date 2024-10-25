@@ -1,0 +1,36 @@
+.favorites {
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  display: block;
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  z-index: 999;
+  line-height: 0;
+  border-radius: 50%;
+  color: var(--white);
+  border: transparent;
+  outline: transparent;
+  background-color: var(--button);
+}
+
+.favorites:hover,
+.favorites:focus {
+  background-color: var(--button-hover);
+}
+
+.count-favorites {
+  font-size: 10px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 8px;
+  bottom: -2px;
+  line-height: 2;
+  border-radius: 50%;
+  background-color: var(--white);
+  color: var(--button-hover);
+  border: 1px solid var(--button-hover);
+  z-index: 9999;
+}

@@ -5,7 +5,7 @@
   padding: 57px 44px;
   border-radius: 10px;
   border: 1px solid var(--gray-ligth);
-  flex: 1 1 0;
+  flex: 1 1 641px;
 }
 
 .header {
@@ -56,4 +56,8 @@
   resize: none;
   height: 118px;
   margin-bottom: 24px;
+}
+
+.button {
+  align-self: center;
 }

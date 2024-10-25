@@ -1,7 +1,7 @@
 import css from './FilterItem.module.css';
 import { splitCamelCase } from '../../helpers/splitCamelCase.js';
 
-function FilterItem({ Icon, value, type, name, register }) {
+function FilterItem({ Icon, value, type, name, register, onChange }) {
   return (
     <>
       <input
@@ -10,6 +10,7 @@ function FilterItem({ Icon, value, type, name, register }) {
         name={name}
         id={value}
         value={value}
+        onClick={onChange} //Забирає дефолтну поведінку для радіокнопки
         {...register(name)}
       />
       <label className={css.container} htmlFor={value}>
