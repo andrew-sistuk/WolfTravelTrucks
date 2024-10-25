@@ -12,7 +12,6 @@ import EquipmentList from '../EquipmentList/EquipmentList.jsx';
 import ownPropertyList from '../../helpers/ownProperty.js';
 //!assets
 import DefaultImg from '../../assets/img/404.jpg';
-
 //!myRedux
 import {useDispatch, useSelector} from 'react-redux';
 import {toggleFavorite} from '../../myRedux/favorites/slice.js';

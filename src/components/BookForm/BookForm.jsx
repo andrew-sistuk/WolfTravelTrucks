@@ -1,7 +1,6 @@
 //!
 //!react and libraries
 //!
-// import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import {Tooltip as ReactTooltip} from 'react-tooltip';
 import {yupResolver} from '@hookform/resolvers/yup';
@@ -9,6 +8,7 @@ import clsx from 'clsx';
 import {toast} from 'react-toastify';
 import {Controller, useForm} from 'react-hook-form';
 import {useRef} from 'react';
+import * as yup from 'yup';
 //!
 //!styles
 //!
@@ -18,7 +18,6 @@ import 'react-datepicker/dist/react-datepicker.css';
 //!component
 //!
 import Button from '../Buttons/Button.jsx';
-import * as yup from 'yup';
 //!
 //!helpers
 //!

@@ -1,15 +1,28 @@
+//!
 //!react and libraries
+//!
 import ReactModal from 'react-modal';
+import {useDispatch, useSelector} from 'react-redux';
+//!
 //!styles
+//!
 import css from './Modal.module.css';
+//!
 //!component
-import { MdOutlineClose } from 'react-icons/md'; //!helpers
-//!assets
-//!myRedux
-import { useDispatch, useSelector } from 'react-redux';
-import { toggleModal } from '../../myRedux/campers/slice.js';
-import { selectModal } from '../../myRedux/campers/selectors.js';
+//!
 import FullPhoto from '../FullPhoto/FullPhoto.jsx';
+import {MdOutlineClose} from 'react-icons/md';
+//!
+//!helpers
+//!
+//!
+//!assets
+//!
+//!
+//!myRedux
+//!
+import {toggleModal} from '../../myRedux/campers/slice.js';
+import {selectModal} from '../../myRedux/campers/selectors.js';
 
 ReactModal.setAppElement('body');
 

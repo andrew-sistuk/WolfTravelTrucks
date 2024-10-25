@@ -12,8 +12,6 @@ function Equipment({ Icon, text }) {
       {Icon && <Icon className={css.icon} />}
       <p className={css.text}>{text}</p>
     </>
-    // <div className={css.category}>
-    // </div>
   );
 }
 

@@ -7,8 +7,6 @@ import Camper from '../Camper/Camper.jsx';
 //!helpers
 //!assets
 //!myRedux
-// import { selectCampers } from '../../myRedux/campers/selectors.js';
-// import { selectFilteredCampers } from '../../myRedux/filters/selectors.js';
 import { selectFilteredAndPaginationCampers } from '../../myRedux/pagination/selectors.js';
 
 function ListCampers() {

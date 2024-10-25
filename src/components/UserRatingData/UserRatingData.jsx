@@ -1,34 +1,31 @@
+//!
 //!react and libraries
-// import ReactStars from 'react-stars';
-// import { toast } from 'react-toastify';
+//!
+import {Link} from 'react-router-dom';
+//!
 //!styles
+//!
 import css from '../Camper/Camper.module.css';
+//!
 //!component
+//!
+//!
+//!helpers
+//!
+//!
+//!assets
+//!
 import Map from '../../assets/icons/map.svg?react';
 import YellowStar from '../../assets/icons/yellow-star.svg?react';
-import {Link} from 'react-router-dom';
-//!helpers
+//!
 //!myRedux
+//!
 
 function UserRatingData({ rating, reviews, location, to }) {
-  // const ratingChanged = newRating => {
-  //   toast(`Rating sending: ${newRating}`);
-  // };
-
   return (
     <div className={css['user-data']}>
       <div className={css.rating}>
         <YellowStar width={16} heigth={16} />
-        {
-          // <ReactStars
-          //   count={5}
-          //   onChange={ratingChanged}
-          //   size={24}
-          //   half={true}
-          //   color1={'#6c717b'}
-          //   color2={'#ffd700'}
-          // />
-        }
         <Link
           className={css['user-rating']}
           to={to}

@@ -1,5 +1,23 @@
-import { useSelector } from 'react-redux';
-import { selectModal } from '../../myRedux/campers/selectors.js';
+//!
+//!react and libraries
+//!
+import {useSelector} from 'react-redux';
+//!
+//!styles
+//!
+//!
+//!component
+//!
+//!
+//!helpers
+//!
+//!
+//!assets
+//!
+//!
+//!myRedux
+//!
+import {selectModal} from '../../myRedux/campers/selectors.js';
 
 function FullPhoto() {
   const modal = useSelector(selectModal);

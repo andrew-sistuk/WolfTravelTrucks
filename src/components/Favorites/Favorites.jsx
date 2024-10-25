@@ -1,8 +1,26 @@
+//!
+//!react and libraries
+//!
+import {TiShoppingCart} from 'react-icons/ti';
+//!
+//!styles
+//!
 import css from './Favorites.module.css';
-import { useSelector } from 'react-redux';
-import { selectFavorites } from '../../myRedux/favorites/selectors.js';
+//!
+//!component
+//!
+//!
+//!helpers
+//!
 import ownPropertyList from '../../helpers/ownProperty.js';
-import { TiShoppingCart } from 'react-icons/ti';
+//!
+//!assets
+//!
+//!
+//!myRedux
+//!
+import {useSelector} from 'react-redux';
+import {selectFavorites} from '../../myRedux/favorites/selectors.js';
 
 function Favorites() {
   const favorites = useSelector(selectFavorites);

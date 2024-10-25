@@ -30,7 +30,6 @@ import {
 } from '../../myRedux/filters/selectors.js';
 import { filterCampers } from '../../myRedux/filters/slice.js';
 import { defaultPerPage } from '../../myRedux/pagination/slice.js';
-import { useState } from 'react';
 
 function Filters() {
   const locations = useSelector(selectCamperLocations);
@@ -42,8 +41,6 @@ function Filters() {
   const defaultType = useSelector(selectFilterType);
 
   const dispatch = useDispatch();
-
-  const [test, setTest] = useState(0);
 
   const { register, control, handleSubmit, watch, setValue } = useForm({
     defaultValues: {

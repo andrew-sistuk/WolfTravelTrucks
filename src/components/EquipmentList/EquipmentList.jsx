@@ -1,7 +1,25 @@
+//!
+//!react and libraries
+//!
+import {nanoid} from 'nanoid';
+//!
+//!styles
+//!
 import css from './EquipmentList.module.css';
-import { nanoid } from 'nanoid';
+//!
+//!component
+//!
 import Equipment from '../Equipment/Equipment.jsx';
-import { EquipmentIcons } from '../../helpers/constants/EquipmentIcons.jsx';
+//!
+//!helpers
+//!
+import {EquipmentIcons} from '../../helpers/constants/EquipmentIcons.jsx';
+//!
+//!assets
+//!
+//!
+//!myRedux
+//!
 
 function EquipmentList({ categories }) {
   return (
