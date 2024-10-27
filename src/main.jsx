@@ -15,7 +15,7 @@ import './index.css';
 import 'modern-normalize';
 
 import { appState, persistor } from 'myRedux';
-import { ModalProvider } from './helpers/context/modalProvider.jsx';
+import { ModalProvider } from 'helpers';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
