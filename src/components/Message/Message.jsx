@@ -1,7 +1,7 @@
 //!
 //!react and libraries
 //!
-import {ToastContainer} from 'react-toastify'; //!
+import { ToastContainer } from 'react-toastify'; //!
 //!styles
 //!
 import 'react-toastify/dist/ReactToastify.css';
@@ -19,7 +19,7 @@ import css from './Message.module.css'; //!
 //!myRedux
 //!
 
-export default function Message() {
+export function Message() {
   return (
     <ToastContainer
       position="top-right"
@@ -36,3 +36,5 @@ export default function Message() {
     />
   );
 }
+
+export default Message;

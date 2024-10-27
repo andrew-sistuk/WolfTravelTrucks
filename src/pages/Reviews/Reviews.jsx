@@ -3,12 +3,12 @@ import { useSelector } from 'react-redux';
 import { nanoid } from 'nanoid'; //!styles
 import css from './Reviews.module.css'; //!components
 import BookForm from '../../components/BookForm/BookForm.jsx';
-import Details from '../../сontainers/Details/Details.jsx';
+import { Details } from 'containers';
 import Star from '../../assets/icons/yellow-star.svg?react';
 import GrayStar from '../../assets/icons/star.svg?react'; //!helpers
 import { selectCamperReviews } from '../../myRedux/campers/selectors.js';
 
-function Reviews() {
+export function Reviews() {
   const reviews = useSelector(selectCamperReviews);
 
   function ratingToStars(rating) {

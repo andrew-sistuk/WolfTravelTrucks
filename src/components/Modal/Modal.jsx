@@ -2,13 +2,14 @@
 //!react and libraries
 //!
 import ReactModal from 'react-modal';
-import {useDispatch, useSelector} from 'react-redux'; //!
+// import {useDispatch} from 'react-redux';
+//!
 //!styles
 //!
 import css from './Modal.module.css'; //!
 //!component
 //!
-import {MdOutlineClose} from 'react-icons/md';
+import { MdOutlineClose } from 'react-icons/md';
 import FullPhoto from '../FullPhoto/FullPhoto.jsx';
 import FavoritesList from '../FavoritesList/FavoritesList.jsx'; //!
 //!helpers
@@ -19,14 +20,12 @@ import FavoritesList from '../FavoritesList/FavoritesList.jsx'; //!
 //!
 //!myRedux
 //!
-import {toggleModal} from '../../myRedux/campers/slice.js';
-import {selectModal} from '../../myRedux/campers/selectors.js';
+import { useModal } from '../../helpers/context/modalContext.js';
 
 ReactModal.setAppElement('#root');
 
-function Modal() {
-  const dispatch = useDispatch();
-  const modal = useSelector(selectModal);
+export function Modal() {
+  const { modal, setModal } = useModal();
 
   function renderContentModal() {
     if (!modal) return null;
@@ -35,13 +34,11 @@ function Modal() {
   }
 
   function handleClose() {
-    dispatch(
-      toggleModal({
-        isOpen: false,
-        type: 'photo',
-        photo: null,
-      })
-    );
+    setModal({
+      isOpen: false,
+      type: 'photo',
+      photo: null,
+    });
   }
 
   return (

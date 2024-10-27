@@ -2,7 +2,7 @@
 //!styles
 import css from './Features.module.css';
 //!component
-import Details from '../../сontainers/Details/Details.jsx';
+import {Details} from 'containers';
 import BookForm from '../../components/BookForm/BookForm.jsx';
 import ownPropertyList from '../../helpers/ownProperty.js';
 import {useSelector} from 'react-redux';
@@ -13,7 +13,7 @@ import EquipmentList from '../../components/EquipmentList/EquipmentList.jsx'; //
 //!assets
 //!myRedux
 
-function Features() {
+export function Features() {
   const camper = useSelector(selectCamper);
   return (
     <Details header="Features">

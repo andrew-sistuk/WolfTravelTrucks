@@ -6,7 +6,7 @@ import css from './Buttons.module.css';
 //!helpers
 //!myRedux
 
-function ButtonLink({ to, value }) {
+export function ButtonLink({ to, value }) {
   return (
     <Link to={to} className={css.button}>
       {value}

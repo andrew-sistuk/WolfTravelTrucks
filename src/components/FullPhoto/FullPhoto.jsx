@@ -1,7 +1,6 @@
 //!
 //!react and libraries
 //!
-import {useSelector} from 'react-redux'; //!
 //!styles
 //!
 import css from './FullPhoto.module.css'; //!
@@ -16,13 +15,14 @@ import css from './FullPhoto.module.css'; //!
 //!
 //!myRedux
 //!
-import {selectModal} from '../../myRedux/campers/selectors.js';
+import {useModal} from '../../helpers/context/modalContext.js';
 
 function FullPhoto() {
-  const modal = useSelector(selectModal);
+  const { modal } = useModal();
+
   return (
     <div className={css['full-photo-container']}>
-      <img className={css.photo} src={modal.photo} alt={modal.type} />
+      <img className={css.photo} src={modal.data} alt={modal.data} />
     </div>
   );
 }

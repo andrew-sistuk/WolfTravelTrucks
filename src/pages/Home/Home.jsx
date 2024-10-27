@@ -3,12 +3,12 @@
 import css from './Home.module.css';
 //!component
 import ButtonLink from '../../components/Buttons/ButtonLink.jsx';
-import Container from '../../сontainers/Container/Container.jsx';
+import { Container } from 'containers';
 //!helpers
 //!assets
 //!myRedux
 
-function Home() {
+export function Home() {
   return (
     <main>
       <Container className={css.main}>

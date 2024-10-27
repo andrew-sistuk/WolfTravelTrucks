@@ -2,12 +2,12 @@
 //!react and libraries
 //!
 import DatePicker from 'react-datepicker';
-import {Tooltip as ReactTooltip} from 'react-tooltip';
-import {yupResolver} from '@hookform/resolvers/yup';
+import { Tooltip as ReactTooltip } from 'react-tooltip';
+import { yupResolver } from '@hookform/resolvers/yup';
 import clsx from 'clsx';
-import {toast} from 'react-toastify';
-import {Controller, useForm} from 'react-hook-form';
-import {useRef} from 'react';
+import { toast } from 'react-toastify';
+import { Controller, useForm } from 'react-hook-form';
+import { useRef } from 'react';
 import * as yup from 'yup';
 //!
 //!styles
@@ -34,7 +34,7 @@ import Button from '../Buttons/Button.jsx';
 //!myRedux
 //!
 
-function BookForm() {
+export function BookForm() {
   const datePickerRef = useRef(null);
 
   const schema = yup.object().shape({

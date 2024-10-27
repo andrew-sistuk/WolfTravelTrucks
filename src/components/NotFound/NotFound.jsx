@@ -19,7 +19,7 @@ import NotFoundImg from '../../assets/img/404.jpg';
 //!myRedux
 //!
 
-function NotFound() {
+export function NotFound() {
   return <img src={NotFoundImg} alt="Not found" className={css['not-found']} />;
 }
 

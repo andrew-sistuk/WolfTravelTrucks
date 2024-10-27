@@ -5,7 +5,7 @@ import css from './Loader.module.css';
 //!helpers
 //!myRedux
 
-const Loader = () => (
+export const Loader = () => (
   <div className={css.loader}>
     <svg width="102" height="40" xmlns="http://www.w3.org/2000/svg">
       <g

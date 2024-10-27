@@ -31,7 +31,7 @@ import {
 import { filterCampers } from '../../myRedux/filters/slice.js';
 import { defaultPerPage } from '../../myRedux/pagination/slice.js';
 
-function Filters() {
+export function Filters() {
   const locations = useSelector(selectCamperLocations);
   const equipments = useSelector(selectEquipments);
   const types = useSelector(selectTypes);

@@ -1,7 +1,7 @@
 //!
 //!react and libraries
 //!
-import {nanoid} from 'nanoid';
+import { nanoid } from 'nanoid';
 //!
 //!styles
 //!
@@ -13,7 +13,7 @@ import Equipment from '../Equipment/Equipment.jsx';
 //!
 //!helpers
 //!
-import {EquipmentIcons} from '../../helpers/constants/EquipmentIcons.jsx';
+import { EquipmentIcons } from '../../helpers/constants/EquipmentIcons.jsx';
 //!
 //!assets
 //!
@@ -21,7 +21,7 @@ import {EquipmentIcons} from '../../helpers/constants/EquipmentIcons.jsx';
 //!myRedux
 //!
 
-function EquipmentList({ categories }) {
+export function EquipmentList({ categories }) {
   return (
     <ul className={css['equipment-list']}>
       {categories.map(

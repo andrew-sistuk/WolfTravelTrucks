@@ -9,12 +9,6 @@ const emptyItem = {
   reviews: [],
 };
 
-const emptyModal = {
-  isOpen: false,
-  type: 'photo',
-  photo: null,
-};
-
 const emptyFilters = {
   equipments: [],
   locations: [],
@@ -24,7 +18,6 @@ const emptyFilters = {
 const handleDefaultProperties = state => {
   state.items = [];
   state.item = emptyItem;
-  state.modal = emptyModal;
   state.filters = emptyFilters;
 };
 
@@ -38,14 +31,8 @@ const campersSlice = createSlice({
   initialState: {
     items: [],
     item: emptyItem,
-    modal: emptyModal,
     filters: emptyFilters,
     error: null,
-  },
-  reducers: {
-    toggleModal: (state, action) => {
-      state.modal = action.payload;
-    },
   },
   extraReducers: builder => {
     builder
@@ -104,7 +91,5 @@ const campersSlice = createSlice({
       .addCase(fetchCamper.rejected, handleRejected);
   },
 });
-
-export const { toggleModal } = campersSlice.actions;
 
 export default campersSlice.reducer;

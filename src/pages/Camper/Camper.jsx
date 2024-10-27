@@ -6,7 +6,7 @@ import clsx from 'clsx';
 //!styles
 import css from '../Camper/Camper.module.css';
 //!component
-import Container from '../../сontainers/Container/Container.jsx';
+import { Container } from 'containers';
 import UserRatingData from '../../components/UserRatingData/UserRatingData.jsx';
 import Loader from '../../components/Loader/Loader.jsx';
 //!helpers
@@ -15,12 +15,13 @@ import convertPrice from '../../helpers/convertPrice.js';
 //!myRedux
 import { fetchCamper } from '../../myRedux/campers/operations.js';
 import { selectCamper } from '../../myRedux/campers/selectors.js';
-import { toggleModal } from '../../myRedux/campers/slice.js';
+import { useModal } from '../../helpers/context/modalContext.js';
 
-function Camper() {
+export function Camper() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const camper = useSelector(selectCamper);
+  const { setModal } = useModal();
 
   useEffect(() => {
     dispatch(fetchCamper(id));
@@ -30,13 +31,11 @@ function Camper() {
     camper;
 
   function handleClick(photo) {
-    dispatch(
-      toggleModal({
-        isOpen: true,
-        type: 'photo',
-        photo: photo,
-      })
-    );
+    setModal({
+      isOpen: true,
+      type: 'photo',
+      photo: photo,
+    });
   }
 
   const handleClassLink = ({ isActive }) => {

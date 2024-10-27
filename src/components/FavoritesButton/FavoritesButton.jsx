@@ -1,7 +1,7 @@
 //!
 //!react and libraries
 //!
-import {TiShoppingCart} from 'react-icons/ti';
+import { TiShoppingCart } from 'react-icons/ti';
 //!
 //!styles
 //!
@@ -19,26 +19,24 @@ import ownPropertyList from '../../helpers/ownProperty.js';
 //!
 //!myRedux
 //!
-import {useDispatch, useSelector} from 'react-redux';
-import {selectFavorites} from '../../myRedux/favorites/selectors.js';
-import {toggleModal} from '../../myRedux/campers/slice.js';
+import { useSelector } from 'react-redux';
+import { selectFavorites } from '../../myRedux/favorites/selectors.js';
+import { useModal } from '../../helpers/context/modalContext.js';
 
-function FavoritesButton() {
+export function FavoritesButton() {
   const favorites = useSelector(selectFavorites);
   const countFavorites = ownPropertyList(favorites, 'count').length;
-  const dispatch = useDispatch();
+  const { setModal } = useModal();
 
   return (
     <button
       className={css.favorites}
       type="button"
       onClick={() => {
-        dispatch(
-          toggleModal({
-            isOpen: true,
-            type: 'favorites',
-          })
-        );
+        setModal({
+          isOpen: true,
+          type: 'favorites',
+        });
       }}
     >
       <TiShoppingCart size={32} />

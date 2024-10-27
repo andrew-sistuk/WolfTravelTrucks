@@ -1,7 +1,7 @@
 //!
 //!react and libraries
 //!
-import {Link} from 'react-router-dom'; //!
+import { Link } from 'react-router-dom'; //!
 //!styles
 //!
 import css from '../Camper/Camper.module.css'; //!
@@ -19,7 +19,7 @@ import YellowStar from '../../assets/icons/yellow-star.svg?react'; //!
 //!myRedux
 //!
 
-function UserRatingData({ rating, reviews, location, to }) {
+export function UserRatingData({ rating, reviews, location, to }) {
   return (
     <div className={css['user-data']}>
       <div className={css.rating}>

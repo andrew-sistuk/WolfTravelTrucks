@@ -6,7 +6,7 @@ import Camper from '../Camper/Camper.jsx'; //!helpers
 //!myRedux
 import { selectFavoritesCampers } from '../../myRedux/favorites/selectors.js';
 
-function FavoritesList() {
+export function FavoritesList() {
   const favorites = useSelector(selectFavoritesCampers);
   return (
     <ul className={css['favorites-cars']}>

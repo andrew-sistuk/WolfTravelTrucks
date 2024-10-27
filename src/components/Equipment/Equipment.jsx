@@ -6,7 +6,7 @@ import css from './Equipment.module.css';
 //!assets
 //!myRedux
 
-function Equipment({ Icon, text }) {
+export function Equipment({ Icon, text }) {
   return (
     <>
       {Icon && <Icon className={css.icon} />}

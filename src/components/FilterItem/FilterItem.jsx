@@ -11,7 +11,7 @@ import css from './FilterItem.module.css';
 //!
 //!helpers
 //!
-import {splitCamelCase} from '../../helpers/splitCamelCase.js';
+import { splitCamelCase } from '../../helpers/splitCamelCase.js';
 //!
 //!assets
 //!
@@ -19,7 +19,7 @@ import {splitCamelCase} from '../../helpers/splitCamelCase.js';
 //!myRedux
 //!
 
-function FilterItem({ Icon, value, type, name, register, onChange }) {
+export function FilterItem({ Icon, value, type, name, register, onChange }) {
   return (
     <>
       <input

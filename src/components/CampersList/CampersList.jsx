@@ -9,7 +9,7 @@ import Camper from '../Camper/Camper.jsx';
 //!myRedux
 import { selectFilteredAndPaginationCampers } from '../../myRedux/pagination/selectors.js';
 
-function CampersList() {
+export function CampersList() {
   const campers = useSelector(selectFilteredAndPaginationCampers);
   return (
     <ul className={css['list-cars']}>
