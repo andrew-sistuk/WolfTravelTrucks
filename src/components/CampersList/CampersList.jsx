@@ -1,12 +1,8 @@
-//!react and libraries
 import { useSelector } from 'react-redux';
-//!styles
 import css from './CampersList.module.css';
-//!component
-import Camper from '../Camper/Camper.jsx';
-//!helpers
-//!assets
-//!myRedux
+
+import { Camper } from 'components';
+
 import { selectFilteredAndPaginationCampers } from '../../myRedux/pagination/selectors.js';
 
 export function CampersList() {
@@ -24,5 +20,3 @@ export function CampersList() {
     </ul>
   );
 }
-
-export default CampersList;

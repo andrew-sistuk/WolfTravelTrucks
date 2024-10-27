@@ -1,23 +1,7 @@
-//!
-//!react and libraries
-//!
-import { ToastContainer } from 'react-toastify'; //!
-//!styles
-//!
+import { ToastContainer } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
-import css from './Message.module.css'; //!
-//!
-//!component
-//!
-//!
-//!helpers
-//!
-//!
-//!assets
-//!
-//!
-//!myRedux
-//!
+import css from './Message.module.css';
 
 export function Message() {
   return (
@@ -36,5 +20,3 @@ export function Message() {
     />
   );
 }
-
-export default Message;

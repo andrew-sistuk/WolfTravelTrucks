@@ -1,10 +1,4 @@
-//!react and libraries
-//!styles
 import css from './Equipment.module.css';
-//!component
-//!helpers
-//!assets
-//!myRedux
 
 export function Equipment({ Icon, text }) {
   return (
@@ -14,5 +8,3 @@ export function Equipment({ Icon, text }) {
     </>
   );
 }
-
-export default Equipment;

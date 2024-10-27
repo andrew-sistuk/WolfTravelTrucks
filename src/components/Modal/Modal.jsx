@@ -1,25 +1,10 @@
-//!
-//!react and libraries
-//!
-import ReactModal from 'react-modal';
-// import {useDispatch} from 'react-redux';
-//!
-//!styles
-//!
-import css from './Modal.module.css'; //!
-//!component
-//!
 import { MdOutlineClose } from 'react-icons/md';
-import FullPhoto from '../FullPhoto/FullPhoto.jsx';
-import FavoritesList from '../FavoritesList/FavoritesList.jsx'; //!
-//!helpers
-//!
-//!
-//!assets
-//!
-//!
-//!myRedux
-//!
+import ReactModal from 'react-modal';
+
+import css from './Modal.module.css';
+
+import { FavoritesList, FullPhoto } from 'components';
+
 import { useModal } from '../../helpers/context/modalContext.js';
 
 ReactModal.setAppElement('#root');
@@ -64,5 +49,3 @@ export function Modal() {
     </ReactModal>
   );
 }
-
-export default Modal;

@@ -1,14 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
-import Loader from './components/Loader/Loader.jsx';
+import { Loader } from 'components';
 
 const Header = lazy(() => import('./components/Header/Header'));
 const Home = lazy(() => import('./pages/Home/Home'));
-const Catalog = lazy(() => import('./pages/Catalog/Catalog.jsx'));
-const Camper = lazy(() => import('./pages/Camper/Camper.jsx'));
-const Features = lazy(() => import('./pages/Features/Features.jsx'));
-const Reviews = lazy(() => import('./pages/Reviews/Reviews.jsx'));
-const NotFound = lazy(() => import('./components/NotFound/NotFound.jsx'));
+const Catalog = lazy(() => import('./pages/Catalog/Catalog'));
+const Camper = lazy(() => import('./pages/Camper/Camper'));
+const Features = lazy(() => import('./pages/Features/Features'));
+const Reviews = lazy(() => import('./pages/Reviews/Reviews'));
+const NotFound = lazy(() => import('./components/NotFound/NotFound'));
 
 function App() {
   return (

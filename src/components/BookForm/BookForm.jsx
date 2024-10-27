@@ -1,6 +1,3 @@
-//!
-//!react and libraries
-//!
 import DatePicker from 'react-datepicker';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -9,30 +6,11 @@ import { toast } from 'react-toastify';
 import { Controller, useForm } from 'react-hook-form';
 import { useRef } from 'react';
 import * as yup from 'yup';
-//!
-//!styles
-//!
+
 import css from './BookForm.module.css';
 import 'react-datepicker/dist/react-datepicker.css';
-//!
-//!component
-//!
-import Button from '../Buttons/Button.jsx';
-//!
-//!helpers
-//!
-//!
-//!helpers
-//!
-//!
-//!helpers
-//!
-//!
-//!assets
-//!
-//!
-//!myRedux
-//!
+
+import { Button } from 'components';
 
 export function BookForm() {
   const datePickerRef = useRef(null);
@@ -165,5 +143,3 @@ export function BookForm() {
     </form>
   );
 }
-
-export default BookForm;

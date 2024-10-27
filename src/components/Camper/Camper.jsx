@@ -1,17 +1,12 @@
-//!react and libraries
-//!styles
 import css from './Camper.module.css';
-//!component
-import ButtonLink from '../Buttons/ButtonLink.jsx';
-import UserRatingData from '../UserRatingData/UserRatingData.jsx';
-import Heart from '../../assets/icons/heart.svg?react';
-import HeartActive from '../../assets/icons/heart-active.svg?react';
+import { ButtonLink, EquipmentList, UserRatingData } from 'components';
 //!helpers
 import convertPrice from '../../helpers/convertPrice.js';
-import EquipmentList from '../EquipmentList/EquipmentList.jsx';
 import ownPropertyList from '../../helpers/ownProperty.js';
 //!assets
 import DefaultImg from '../../assets/img/404.jpg';
+import Heart from '../../assets/icons/heart.svg?react';
+import HeartActive from '../../assets/icons/heart-active.svg?react';
 //!myRedux
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleFavorite } from '../../myRedux/favorites/slice.js';
@@ -64,5 +59,3 @@ export function Camper({ camper }) {
     </li>
   );
 }
-
-export default Camper;

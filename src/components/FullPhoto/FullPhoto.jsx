@@ -1,23 +1,7 @@
-//!
-//!react and libraries
-//!
-//!styles
-//!
-import css from './FullPhoto.module.css'; //!
-//!component
-//!
-//!
-//!helpers
-//!
-//!
-//!assets
-//!
-//!
-//!myRedux
-//!
-import {useModal} from '../../helpers/context/modalContext.js';
+import css from './FullPhoto.module.css';
+import { useModal } from '../../helpers/context/modalContext.js';
 
-function FullPhoto() {
+export function FullPhoto() {
   const { modal } = useModal();
 
   return (
@@ -26,5 +10,3 @@ function FullPhoto() {
     </div>
   );
 }
-
-export default FullPhoto;

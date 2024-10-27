@@ -37,5 +37,3 @@ export const selectStyles = {
     display: 'none',
   }),
 };
-
-export const classNames = {};

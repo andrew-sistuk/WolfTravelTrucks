@@ -1,23 +1,8 @@
-//!
-//!react and libraries
-//!
-import { Link } from 'react-router-dom'; //!
-//!styles
-//!
-import css from '../Camper/Camper.module.css'; //!
-//!component
-//!
-//!
-//!helpers
-//!
-//!
-//!assets
-//!
+import { Link } from 'react-router-dom';
+import css from '../Camper/Camper.module.css';
+
 import Map from '../../assets/icons/map.svg?react';
-import YellowStar from '../../assets/icons/yellow-star.svg?react'; //!
-//!
-//!myRedux
-//!
+import YellowStar from '../../assets/icons/yellow-star.svg?react';
 
 export function UserRatingData({ rating, reviews, location, to }) {
   return (
@@ -40,5 +25,3 @@ export function UserRatingData({ rating, reviews, location, to }) {
     </div>
   );
 }
-
-export default UserRatingData;

@@ -1,10 +1,6 @@
-//!
-//!react and libraries
-//!
+import { useSelector } from 'react-redux';
 import { TiShoppingCart } from 'react-icons/ti';
-//!
-//!styles
-//!
+
 import css from './FavoritesButton.module.css';
 //!
 //!component
@@ -13,15 +9,14 @@ import css from './FavoritesButton.module.css';
 //!helpers
 //!
 import ownPropertyList from '../../helpers/ownProperty.js';
+import { useModal } from '../../helpers/context/modalContext.js';
 //!
 //!assets
 //!
 //!
 //!myRedux
 //!
-import { useSelector } from 'react-redux';
 import { selectFavorites } from '../../myRedux/favorites/selectors.js';
-import { useModal } from '../../helpers/context/modalContext.js';
 
 export function FavoritesButton() {
   const favorites = useSelector(selectFavorites);
@@ -46,5 +41,3 @@ export function FavoritesButton() {
     </button>
   );
 }
-
-export default FavoritesButton;

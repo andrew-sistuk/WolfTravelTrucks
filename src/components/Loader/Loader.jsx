@@ -1,9 +1,4 @@
-//!react and libraries
-//!styles
 import css from './Loader.module.css';
-//!component
-//!helpers
-//!myRedux
 
 export const Loader = () => (
   <div className={css.loader}>
@@ -56,5 +51,3 @@ export const Loader = () => (
     </svg>
   </div>
 );
-
-export default Loader;

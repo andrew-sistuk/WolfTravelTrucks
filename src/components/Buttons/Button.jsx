@@ -1,11 +1,5 @@
-//!react and libraries
 import clsx from 'clsx';
-//!styles
 import css from './Buttons.module.css';
-//!component
-//!helpers
-//!assets
-//!myRedux
 
 export function Button({ type = 'submit', value, onClick, form, style }) {
   return (
@@ -19,5 +13,3 @@ export function Button({ type = 'submit', value, onClick, form, style }) {
     </button>
   );
 }
-
-export default Button;

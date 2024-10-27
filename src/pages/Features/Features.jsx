@@ -1,19 +1,15 @@
-//!react and libraries
-//!styles
-import css from './Features.module.css';
-//!component
-import {Details} from 'containers';
-import BookForm from '../../components/BookForm/BookForm.jsx';
-import ownPropertyList from '../../helpers/ownProperty.js';
-import {useSelector} from 'react-redux';
-import {selectCamper} from '../../myRedux/campers/selectors.js';
-import {nanoid} from 'nanoid';
-import EquipmentList from '../../components/EquipmentList/EquipmentList.jsx'; //!helpers
-//!helpers
-//!assets
-//!myRedux
+import { nanoid } from 'nanoid';
+import { useSelector } from 'react-redux';
 
-export function Features() {
+import css from './Features.module.css';
+
+import { Details } from 'containers';
+import { BookForm, EquipmentList } from 'components';
+
+import ownPropertyList from '../../helpers/ownProperty.js';
+import { selectCamper } from '../../myRedux/campers/selectors.js';
+
+export default function Features() {
   const camper = useSelector(selectCamper);
   return (
     <Details header="Features">
@@ -37,5 +33,3 @@ export function Features() {
     </Details>
   );
 }
-
-export default Features;

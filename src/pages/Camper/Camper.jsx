@@ -1,23 +1,20 @@
-//!react and libraries
 import { Suspense, useEffect } from 'react';
 import { NavLink, Outlet, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import clsx from 'clsx';
-//!styles
+
 import css from '../Camper/Camper.module.css';
-//!component
+
 import { Container } from 'containers';
-import UserRatingData from '../../components/UserRatingData/UserRatingData.jsx';
-import Loader from '../../components/Loader/Loader.jsx';
-//!helpers
+import { Loader, UserRatingData } from 'components';
+
 import convertPrice from '../../helpers/convertPrice.js';
-//!assets
-//!myRedux
-import { fetchCamper } from '../../myRedux/campers/operations.js';
-import { selectCamper } from '../../myRedux/campers/selectors.js';
 import { useModal } from '../../helpers/context/modalContext.js';
 
-export function Camper() {
+import { fetchCamper } from '../../myRedux/campers/operations.js';
+import { selectCamper } from '../../myRedux/campers/selectors.js';
+
+export default function Camper() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const camper = useSelector(selectCamper);
@@ -87,5 +84,3 @@ export function Camper() {
     </section>
   );
 }
-
-export default Camper;

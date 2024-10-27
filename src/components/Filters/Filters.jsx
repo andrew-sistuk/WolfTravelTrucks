@@ -1,22 +1,18 @@
-//!react and libraries
 import Select, { components } from 'react-select';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
 import { Controller, useForm } from 'react-hook-form';
 import clsx from 'clsx';
 import { useDispatch, useSelector } from 'react-redux';
-//!styles
+
 import css from './Filters.module.css';
 import 'react-tooltip/dist/react-tooltip.css';
-import { selectStyles } from './selectStyles.js';
-//!component
-import Button from '../Buttons/Button.jsx';
-import FilterItem from '../FilterItem/FilterItem.jsx';
-//!helpers
+
+import { Button, FilterItem, selectStyles } from 'components';
+
 import { EquipmentIcons } from '../../helpers/constants/EquipmentIcons.jsx';
 import { TypeIcons } from '../../helpers/constants/TypeIcons.jsx';
-//!assets
+
 import Map from '../../assets/icons/map.svg?react';
-//!myRedux
 import {
   selectCamperLocations,
   selectEquipments,

@@ -1,10 +1,5 @@
-//!react and libraries
 import { Link } from 'react-router-dom';
-//!styles
 import css from './Buttons.module.css';
-//!component
-//!helpers
-//!myRedux
 
 export function ButtonLink({ to, value }) {
   return (
@@ -13,5 +8,3 @@ export function ButtonLink({ to, value }) {
     </Link>
   );
 }
-
-export default ButtonLink;

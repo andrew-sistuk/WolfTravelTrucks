@@ -1,14 +1,9 @@
-//!react and libraries
-//!styles
 import css from './Home.module.css';
-//!component
-import ButtonLink from '../../components/Buttons/ButtonLink.jsx';
-import { Container } from 'containers';
-//!helpers
-//!assets
-//!myRedux
 
-export function Home() {
+import { ButtonLink } from 'components';
+import { Container } from 'containers';
+
+export default function Home() {
   return (
     <main>
       <Container className={css.main}>
@@ -21,5 +16,3 @@ export function Home() {
     </main>
   );
 }
-
-export default Home;
