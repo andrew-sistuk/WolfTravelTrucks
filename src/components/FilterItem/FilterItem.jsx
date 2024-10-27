@@ -1,5 +1,5 @@
 import css from './FilterItem.module.css';
-import { splitCamelCase } from '../../helpers/splitCamelCase.js';
+import { splitCamelCase } from 'helpers';
 
 export function FilterItem({ Icon, value, type, name, register, onChange }) {
   return (

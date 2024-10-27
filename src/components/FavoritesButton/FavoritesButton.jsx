@@ -3,8 +3,7 @@ import { TiShoppingCart } from 'react-icons/ti';
 
 import css from './FavoritesButton.module.css';
 
-import ownPropertyList from '../../helpers/ownProperty.js';
-import { useModal } from '../../helpers/context/modalContext.js';
+import { ownPropertyList, useModal } from 'helpers';
 
 import { selectFavorites } from 'myRedux';
 

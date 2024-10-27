@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import css from './Camper.module.css';
 import { ButtonLink, EquipmentList, UserRatingData } from 'components';
 
-import convertPrice from '../../helpers/convertPrice.js';
-import ownPropertyList from '../../helpers/ownProperty.js';
+import { convertPrice, ownPropertyList } from 'helpers';
 
 import DefaultImg from '../../assets/img/404.jpg';
 import Heart from '../../assets/icons/heart.svg?react';

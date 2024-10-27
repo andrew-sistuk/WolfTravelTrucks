@@ -11,6 +11,9 @@
       ],
       "myRedux/*": [
         "myRedux/*"
+      ],
+      "helpers/*": [
+        "myRedux/*"
       ]
     }
   },

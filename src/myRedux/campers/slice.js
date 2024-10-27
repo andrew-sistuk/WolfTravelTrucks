@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchCamper, fetchCampers } from './operations';
-import addId from '../../helpers/addId.js';
-import ownPropertyList from '../../helpers/ownProperty.js';
+import { addId, ownPropertyList } from 'helpers';
 import { nanoid } from 'nanoid';
 
 const emptyItem = {

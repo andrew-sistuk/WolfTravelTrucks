@@ -6,7 +6,7 @@ import css from './Features.module.css';
 import { Details } from 'containers';
 import { BookForm, EquipmentList } from 'components';
 
-import ownPropertyList from '../../helpers/ownProperty.js';
+import { ownPropertyList } from 'helpers';
 import { selectCamper } from 'myRedux';
 
 export default function Features() {

@@ -1,5 +1,5 @@
 import css from './FullPhoto.module.css';
-import { useModal } from '../../helpers/context/modalContext.js';
+import { useModal } from 'helpers';
 
 export function FullPhoto() {
   const { modal } = useModal();

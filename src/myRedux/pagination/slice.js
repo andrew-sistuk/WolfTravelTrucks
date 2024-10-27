@@ -1,15 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
-import perPage from '../../helpers/constants/perPage.js';
+import { PER_PAGE } from 'helpers';
 
 const paginationSlice = createSlice({
   name: 'pagination',
-  initialState: { perPage },
+  initialState: { perPage: PER_PAGE },
   reducers: {
     paginationPage(state) {
-      state.perPage += perPage;
+      state.perPage += PER_PAGE;
     },
     defaultPerPage(state) {
-      state.perPage = perPage;
+      state.perPage = PER_PAGE;
     },
   },
 });

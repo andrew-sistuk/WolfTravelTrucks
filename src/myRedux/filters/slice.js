@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-// import perPage from '../../helpers/constants/perPage.js';
 
 const filtersSlice = createSlice({
   name: 'filters',

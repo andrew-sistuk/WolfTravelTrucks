@@ -8,8 +8,7 @@ import css from '../Camper/Camper.module.css';
 import { Container } from 'containers';
 import { Loader, UserRatingData } from 'components';
 
-import convertPrice from '../../helpers/convertPrice.js';
-import { useModal } from '../../helpers/context/modalContext.js';
+import { convertPrice, useModal } from 'helpers';
 
 import { fetchCamper, selectCamper } from 'myRedux';
 

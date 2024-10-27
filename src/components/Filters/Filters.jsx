@@ -9,8 +9,7 @@ import 'react-tooltip/dist/react-tooltip.css';
 
 import { Button, FilterItem, selectStyles } from 'components';
 
-import { EquipmentIcons } from '../../helpers/constants/EquipmentIcons.jsx';
-import { TypeIcons } from '../../helpers/constants/TypeIcons.jsx';
+import { EquipmentIcons, TypeIcons } from 'helpers';
 
 import Map from '../../assets/icons/map.svg?react';
 

@@ -13,6 +13,7 @@ export default defineConfig({
       components: '/src/components',
       containers: '/src/containers',
       myRedux: '/src/myRedux',
+      helpers: '/src/helpers',
     },
   },
 });

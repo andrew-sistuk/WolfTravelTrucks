@@ -3,7 +3,7 @@ import css from './EquipmentList.module.css';
 
 import { Equipment } from 'components';
 
-import { EquipmentIcons } from '../../helpers/constants/EquipmentIcons.jsx';
+import { EquipmentIcons } from 'helpers';
 
 export function EquipmentList({ categories }) {
   return (

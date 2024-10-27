@@ -1,7 +1,7 @@
 import { basePropertyList } from './constants/basePropertyList.js';
 import { nanoid } from 'nanoid';
 
-export default function ownPropertyList(obj, type = 'equipment') {
+export function ownPropertyList(obj, type = 'equipment') {
   const propertyList = [];
   for (const property in obj) {
     if (

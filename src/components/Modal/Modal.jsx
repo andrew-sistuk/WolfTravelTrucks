@@ -5,7 +5,7 @@ import css from './Modal.module.css';
 
 import { FavoritesList, FullPhoto } from 'components';
 
-import { useModal } from '../../helpers/context/modalContext.js';
+import { useModal } from 'helpers';
 
 ReactModal.setAppElement('#root');
 
