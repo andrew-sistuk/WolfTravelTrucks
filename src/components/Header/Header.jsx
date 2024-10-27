@@ -5,7 +5,7 @@ import css from './Header.module.css';
 import { Container } from 'containers';
 import { Message, Modal } from 'components';
 
-import Logo from '/src/assets/icons/logo.svg?react';
+import { Logo } from 'assets';
 
 export default function Header() {
   const buildLinkClass = ({ isActive }) => {

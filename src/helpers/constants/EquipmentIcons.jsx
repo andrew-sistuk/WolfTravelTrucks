@@ -1,10 +1,4 @@
-import Automatic from '../../assets/icons/equipment/automatic.svg?react';
-import Petrol from '../../assets/icons/equipment/petrol.svg?react';
-import Kitchen from '../../assets/icons/equipment/kitchen.svg?react';
-import Radio from '../../assets/icons/equipment/radio.svg?react';
-import Water from '../../assets/icons/equipment/water.svg?react';
-import TV from '../../assets/icons/equipment/tv.svg?react';
-import AC from '../../assets/icons/equipment/ac.svg?react';
+import { AC, Automatic, Kitchen, Petrol, Radio, TV, Water } from 'assets';
 
 import { GiGasStove, GiThermometerCold } from 'react-icons/gi';
 import { MdOutlineBathroom, MdOutlineMicrowave } from 'react-icons/md';

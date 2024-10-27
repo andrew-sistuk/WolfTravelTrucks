@@ -5,9 +5,7 @@ import { ButtonLink, EquipmentList, UserRatingData } from 'components';
 
 import { convertPrice, ownPropertyList } from 'helpers';
 
-import DefaultImg from '../../assets/img/404.jpg';
-import Heart from '../../assets/icons/heart.svg?react';
-import HeartActive from '../../assets/icons/heart-active.svg?react';
+import { DefaultImg, Heart, HeartActive } from 'assets';
 
 import { selectFavorites, toggleFavorite } from 'myRedux';
 

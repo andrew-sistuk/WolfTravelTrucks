@@ -2,11 +2,11 @@ import { useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
 
 import css from './Reviews.module.css';
+
 import { BookForm } from 'components';
 import { Details } from 'containers';
 
-import Star from '../../assets/icons/yellow-star.svg?react';
-import GrayStar from '../../assets/icons/star.svg?react';
+import { GrayStar, Star } from 'assets';
 
 import { selectCamperReviews } from 'myRedux';
 

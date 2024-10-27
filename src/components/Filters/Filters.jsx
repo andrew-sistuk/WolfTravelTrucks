@@ -11,7 +11,7 @@ import { Button, FilterItem, selectStyles } from 'components';
 
 import { EquipmentIcons, TypeIcons } from 'helpers';
 
-import Map from '../../assets/icons/map.svg?react';
+import { Map } from 'assets';
 
 import {
   defaultPerPage,

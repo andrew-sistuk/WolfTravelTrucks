@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom';
 import css from '../Camper/Camper.module.css';
 
-import Map from '../../assets/icons/map.svg?react';
-import YellowStar from '../../assets/icons/yellow-star.svg?react';
+import { Map, Star } from 'assets';
 
 export function UserRatingData({ rating, reviews, location, to }) {
   return (
     <div className={css['user-data']}>
       <div className={css.rating}>
-        <YellowStar width={16} heigth={16} />
+        <Star width={16} heigth={16} />
         <Link
           className={css['user-rating']}
           to={`/campers/${to}`}

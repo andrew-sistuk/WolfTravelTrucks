@@ -14,6 +14,7 @@ export default defineConfig({
       containers: '/src/containers',
       myRedux: '/src/myRedux',
       helpers: '/src/helpers',
+      assets: '/src/assets',
     },
   },
 });
