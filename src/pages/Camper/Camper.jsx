@@ -11,8 +11,7 @@ import { Loader, UserRatingData } from 'components';
 import convertPrice from '../../helpers/convertPrice.js';
 import { useModal } from '../../helpers/context/modalContext.js';
 
-import { fetchCamper } from '../../myRedux/campers/operations.js';
-import { selectCamper } from '../../myRedux/campers/selectors.js';
+import { fetchCamper, selectCamper } from 'myRedux';
 
 export default function Camper() {
   const { id } = useParams();

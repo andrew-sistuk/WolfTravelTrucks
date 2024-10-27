@@ -7,11 +7,11 @@ import { Message, Modal } from 'components';
 
 import Logo from '/src/assets/icons/logo.svg?react';
 
-const buildLinkClass = ({ isActive }) => {
-  return clsx(css.navigate, isActive && css.active);
-};
-
 export default function Header() {
+  const buildLinkClass = ({ isActive }) => {
+    return clsx(css.navigate, isActive && css.active);
+  };
+
   return (
     <>
       <header>

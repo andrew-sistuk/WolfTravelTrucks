@@ -1,16 +1,16 @@
+import { useDispatch, useSelector } from 'react-redux';
+
 import css from './Camper.module.css';
 import { ButtonLink, EquipmentList, UserRatingData } from 'components';
-//!helpers
+
 import convertPrice from '../../helpers/convertPrice.js';
 import ownPropertyList from '../../helpers/ownProperty.js';
-//!assets
+
 import DefaultImg from '../../assets/img/404.jpg';
 import Heart from '../../assets/icons/heart.svg?react';
 import HeartActive from '../../assets/icons/heart-active.svg?react';
-//!myRedux
-import { useDispatch, useSelector } from 'react-redux';
-import { toggleFavorite } from '../../myRedux/favorites/slice.js';
-import { selectFavorites } from '../../myRedux/favorites/selectors.js';
+
+import { selectFavorites, toggleFavorite } from 'myRedux';
 
 export function Camper({ camper }) {
   const { id, gallery, name, price, reviews, rating, location, description } =

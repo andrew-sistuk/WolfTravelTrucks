@@ -2,21 +2,11 @@ import { useSelector } from 'react-redux';
 import { TiShoppingCart } from 'react-icons/ti';
 
 import css from './FavoritesButton.module.css';
-//!
-//!component
-//!
-//!
-//!helpers
-//!
+
 import ownPropertyList from '../../helpers/ownProperty.js';
 import { useModal } from '../../helpers/context/modalContext.js';
-//!
-//!assets
-//!
-//!
-//!myRedux
-//!
-import { selectFavorites } from '../../myRedux/favorites/selectors.js';
+
+import { selectFavorites } from 'myRedux';
 
 export function FavoritesButton() {
   const favorites = useSelector(selectFavorites);

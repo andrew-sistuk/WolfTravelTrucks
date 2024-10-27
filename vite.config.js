@@ -12,6 +12,7 @@ export default defineConfig({
     alias: {
       components: '/src/components',
       containers: '/src/containers',
+      myRedux: '/src/myRedux',
     },
   },
 });

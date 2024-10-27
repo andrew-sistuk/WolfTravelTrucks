@@ -13,19 +13,17 @@ import { EquipmentIcons } from '../../helpers/constants/EquipmentIcons.jsx';
 import { TypeIcons } from '../../helpers/constants/TypeIcons.jsx';
 
 import Map from '../../assets/icons/map.svg?react';
-import {
-  selectCamperLocations,
-  selectEquipments,
-  selectTypes,
-} from '../../myRedux/campers/selectors.js';
 
 import {
+  defaultPerPage,
+  filterCampers,
+  selectCamperLocations,
+  selectEquipments,
   selectFilterEquipments,
   selectFilterLocations,
   selectFilterType,
-} from '../../myRedux/filters/selectors.js';
-import { filterCampers } from '../../myRedux/filters/slice.js';
-import { defaultPerPage } from '../../myRedux/pagination/slice.js';
+  selectTypes,
+} from 'myRedux';
 
 export function Filters() {
   const locations = useSelector(selectCamperLocations);
@@ -181,5 +179,3 @@ export function Filters() {
     </form>
   );
 }
-
-export default Filters;

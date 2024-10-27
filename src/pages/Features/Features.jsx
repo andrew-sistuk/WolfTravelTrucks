@@ -7,7 +7,7 @@ import { Details } from 'containers';
 import { BookForm, EquipmentList } from 'components';
 
 import ownPropertyList from '../../helpers/ownProperty.js';
-import { selectCamper } from '../../myRedux/campers/selectors.js';
+import { selectCamper } from 'myRedux';
 
 export default function Features() {
   const camper = useSelector(selectCamper);

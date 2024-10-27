@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import css from './Catalog.module.css';
-//!component
+
 import { Container } from 'containers';
 import {
   Button,
@@ -11,13 +11,13 @@ import {
   Filters,
   Message,
 } from 'components';
-//!helpers
-//!assets
-//!myRedux
-import { fetchCampers } from '../../myRedux/campers/operations.js';
-import { selectPerPage } from '../../myRedux/pagination/selectors.js';
-import { selectTotal } from '../../myRedux/filters/selectors.js';
-import { paginationPage } from '../../myRedux/pagination/slice.js';
+
+import {
+  fetchCampers,
+  paginationPage,
+  selectPerPage,
+  selectTotal,
+} from 'myRedux';
 
 export default function Catalog() {
   const dispatch = useDispatch();

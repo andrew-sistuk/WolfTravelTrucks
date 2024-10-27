@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import css from './FavoritesList.module.css';
 import { Camper } from 'components';
 
-import { selectFavoritesCampers } from '../../myRedux/favorites/selectors.js';
+import { selectFavoritesCampers } from 'myRedux';
 
 export function FavoritesList() {
   const favorites = useSelector(selectFavoritesCampers);

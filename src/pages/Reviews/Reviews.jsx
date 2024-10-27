@@ -8,7 +8,7 @@ import { Details } from 'containers';
 import Star from '../../assets/icons/yellow-star.svg?react';
 import GrayStar from '../../assets/icons/star.svg?react';
 
-import { selectCamperReviews } from '../../myRedux/campers/selectors.js';
+import { selectCamperReviews } from 'myRedux';
 
 export default function Reviews() {
   const reviews = useSelector(selectCamperReviews);

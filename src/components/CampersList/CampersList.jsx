@@ -2,8 +2,7 @@ import { useSelector } from 'react-redux';
 import css from './CampersList.module.css';
 
 import { Camper } from 'components';
-
-import { selectFilteredAndPaginationCampers } from '../../myRedux/pagination/selectors.js';
+import { selectFilteredAndPaginationCampers } from 'myRedux';
 
 export function CampersList() {
   const campers = useSelector(selectFilteredAndPaginationCampers);

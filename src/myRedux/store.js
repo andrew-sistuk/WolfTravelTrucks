@@ -10,10 +10,11 @@ import {
   REHYDRATE,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+
 import campersSlice from './campers/slice';
-import filtersSlice from './filters/slice.js';
-import favoritesSlice from './favorites/slice.js';
-import paginationSlice from './pagination/slice.js';
+import filtersSlice from './filters/slice';
+import favoritesSlice from './favorites/slice';
+import paginationSlice from './pagination/slice';
 
 const favoritesConfig = {
   key: 'favorites',
