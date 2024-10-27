@@ -1,0 +1,17 @@
+.favorites-cars {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 888px;
+  margin: 0 auto;
+}
+
+.warning-message {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.33;
+  text-align: center;
+  min-width: 888px;
+  color: var(--button);
+  filter: drop-shadow(1px 1px 3px var(--gray));
+}

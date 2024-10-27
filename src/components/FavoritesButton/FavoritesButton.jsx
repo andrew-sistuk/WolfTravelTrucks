@@ -5,7 +5,7 @@ import {TiShoppingCart} from 'react-icons/ti';
 //!
 //!styles
 //!
-import css from './Favorites.module.css';
+import css from './FavoritesButton.module.css';
 //!
 //!component
 //!
@@ -19,15 +19,28 @@ import ownPropertyList from '../../helpers/ownProperty.js';
 //!
 //!myRedux
 //!
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {selectFavorites} from '../../myRedux/favorites/selectors.js';
+import {toggleModal} from '../../myRedux/campers/slice.js';
 
-function Favorites() {
+function FavoritesButton() {
   const favorites = useSelector(selectFavorites);
   const countFavorites = ownPropertyList(favorites, 'count').length;
+  const dispatch = useDispatch();
 
   return (
-    <button className={css.favorites} type="button" onClick={() => {}}>
+    <button
+      className={css.favorites}
+      type="button"
+      onClick={() => {
+        dispatch(
+          toggleModal({
+            isOpen: true,
+            type: 'favorites',
+          })
+        );
+      }}
+    >
       <TiShoppingCart size={32} />
       {!!countFavorites && (
         <p className={css['count-favorites']}>{countFavorites}</p>
@@ -36,4 +49,4 @@ function Favorites() {
   );
 }
 
-export default Favorites;
+export default FavoritesButton;

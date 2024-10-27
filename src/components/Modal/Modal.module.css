@@ -1,7 +1,7 @@
 .close {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  position: fixed;
+  right: 100px;
+  top: 100px;
   width: 32px;
   height: 32px;
   cursor: pointer;

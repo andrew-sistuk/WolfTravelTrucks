@@ -15,13 +15,16 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { appState, persistor } from './myRedux/store.js';
 import { PersistGate } from 'redux-persist/integration/react';
+import { ModalProvider } from './helpers/context/modalContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={appState}>
       <PersistGate persistor={persistor}>
         <BrowserRouter>
-          <App />
+          <ModalProvider>
+            <App />
+          </ModalProvider>
         </BrowserRouter>
       </PersistGate>
     </Provider>

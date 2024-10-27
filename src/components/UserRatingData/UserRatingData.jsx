@@ -1,12 +1,10 @@
 //!
 //!react and libraries
 //!
-import {Link} from 'react-router-dom';
-//!
+import {Link} from 'react-router-dom'; //!
 //!styles
 //!
-import css from '../Camper/Camper.module.css';
-//!
+import css from '../Camper/Camper.module.css'; //!
 //!component
 //!
 //!
@@ -16,7 +14,7 @@ import css from '../Camper/Camper.module.css';
 //!assets
 //!
 import Map from '../../assets/icons/map.svg?react';
-import YellowStar from '../../assets/icons/yellow-star.svg?react';
+import YellowStar from '../../assets/icons/yellow-star.svg?react'; //!
 //!
 //!myRedux
 //!
@@ -28,7 +26,7 @@ function UserRatingData({ rating, reviews, location, to }) {
         <YellowStar width={16} heigth={16} />
         <Link
           className={css['user-rating']}
-          to={to}
+          to={`/campers/${to}`}
         >{`${rating} (${reviews.length} reviews)`}</Link>
       </div>
       <a

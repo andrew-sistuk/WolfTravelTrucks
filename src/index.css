@@ -1,4 +1,4 @@
-#root {
+:root {
   --main: #101828;
   --text: #475467;
   --gray: #6c717b;
@@ -10,6 +10,9 @@
   --inputs: #f7f7f7;
   --white: #ffffff;
   --animation: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  scrollbar-width: thin;
+  scrollbar-color: #d84343 #475467;
 }
 
 /** {*/

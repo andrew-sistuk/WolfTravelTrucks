@@ -1,0 +1,15 @@
+.list-cars {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 888px;
+}
+
+.warning-message {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.33;
+  text-align: center;
+  min-width: 888px;
+  color: var(--button-hover);
+}

@@ -59,7 +59,7 @@ function Camper({ camper }) {
           <p className={css.description}>{description}</p>
           <EquipmentList categories={ownPropertyList(camper, 'equipment')} />
         </div>
-        <ButtonLink to={id} value="Show more" />
+        <ButtonLink to={`/campers/${id}`} value="Show more" />
       </div>
     </li>
   );

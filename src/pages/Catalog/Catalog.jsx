@@ -7,7 +7,7 @@ import Message from '../../components/Message/Message.jsx';
 import Filters from '../../components/Filters/Filters.jsx';
 import Container from '../../сontainers/Container/Container.jsx';
 import Button from '../../components/Buttons/Button.jsx';
-import ListCampers from '../../components/ListCampers/ListCampers.jsx';
+import CampersList from '../../components/CampersList/CampersList.jsx';
 //!helpers
 //!assets
 //!myRedux
@@ -16,7 +16,7 @@ import { fetchCampers } from '../../myRedux/campers/operations.js';
 import { paginationPage } from '../../myRedux/pagination/slice.js';
 import { selectPerPage } from '../../myRedux/pagination/selectors.js';
 import { selectTotal } from '../../myRedux/filters/selectors.js';
-import Favorites from '../../components/Favorites/Favorites.jsx';
+import FavoritesButton from '../../components/FavoritesButton/FavoritesButton.jsx';
 
 function Catalog() {
   const dispatch = useDispatch();
@@ -33,7 +33,7 @@ function Catalog() {
       <Container className={css.catalog}>
         <Filters />
         <div className={css['container-catalog-list']}>
-          <ListCampers />
+          <CampersList />
           {perPage < total && (
             <Button
               type="button"
@@ -42,7 +42,7 @@ function Catalog() {
               style={css['load-more']}
             />
           )}
-          <Favorites />
+          <FavoritesButton />
         </div>
       </Container>
       <Message />
