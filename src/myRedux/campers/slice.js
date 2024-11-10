@@ -14,15 +14,21 @@ const emptyFilters = {
   types: [],
 };
 
-const handleDefaultProperties = state => {
+const defaultProperties = state => {
   state.items = [];
   state.item = emptyItem;
   state.filters = emptyFilters;
 };
 
+const handlePending = state => {
+  state.loading = true;
+  defaultProperties(state);
+};
+
 const handleRejected = (state, action) => {
   state.error = action.payload;
-  handleDefaultProperties(state);
+  state.loading = false;
+  defaultProperties(state);
 };
 
 const campersSlice = createSlice({
@@ -31,11 +37,12 @@ const campersSlice = createSlice({
     items: [],
     item: emptyItem,
     filters: emptyFilters,
+    loading: false,
     error: null,
   },
   extraReducers: builder => {
     builder
-      .addCase(fetchCampers.pending, handleDefaultProperties)
+      .addCase(fetchCampers.pending, handlePending)
       .addCase(fetchCampers.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
@@ -77,7 +84,7 @@ const campersSlice = createSlice({
       })
       .addCase(fetchCampers.rejected, handleRejected)
 
-      .addCase(fetchCamper.pending, handleDefaultProperties)
+      .addCase(fetchCamper.pending, handlePending)
       .addCase(fetchCamper.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;

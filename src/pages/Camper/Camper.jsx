@@ -10,13 +10,21 @@ import { Loader, UserRatingData } from 'components';
 
 import { convertPrice, useModal } from 'helpers';
 
-import { fetchCamper, selectCamper } from 'myRedux';
+import {
+  fetchCamper,
+  selectCamper,
+  selectCampersError,
+  selectCampersLoading,
+} from 'myRedux';
 
 export default function Camper() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const camper = useSelector(selectCamper);
   const { setModal } = useModal();
+
+  const loading = useSelector(selectCampersLoading);
+  const error = useSelector(selectCampersError);
 
   useEffect(() => {
     dispatch(fetchCamper(id));
@@ -37,7 +45,11 @@ export default function Camper() {
     return clsx(css.link, isActive && css.active);
   };
 
-  return (
+  return error ? (
+    <p className={css['warning-message']}>Something went wrong</p>
+  ) : loading ? (
+    <p className={css['warning-message']}>Loading...</p>
+  ) : (
     <section>
       <h2 className="visually-hidden">Catalog</h2>
       <Container className={css.camper}>

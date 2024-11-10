@@ -31,6 +31,7 @@ export function BookForm() {
       .min(new Date(), 'The date must be current or in the future')
       .typeError('Please enter a valid date'),
   });
+
   const {
     control,
     register,
