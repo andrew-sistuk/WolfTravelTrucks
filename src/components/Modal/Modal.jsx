@@ -28,16 +28,9 @@ export function Modal() {
 
   return (
     <ReactModal
-      style={{
-        overlay: {
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        },
-        content: {
-          backgroundColor: 'transparent',
-          border: 'transparent',
-          overflowY: 'auto',
-        },
-      }}
+      className={css.modal}
+      overlayClassName={css.overlay}
+      contentClassName={css.content}
       isOpen={modal.isOpen}
       shouldCloseOnEsc={true}
       shouldCloseOnOverlayClick={true}

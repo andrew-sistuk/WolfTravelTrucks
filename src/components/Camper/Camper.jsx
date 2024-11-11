@@ -25,7 +25,7 @@ export function Camper({ camper }) {
         loading="lazy"
       />
       <div className={css.data}>
-        <div>
+        <div className={css['container-data']}>
           <div className={css['main-data']}>
             <h3 className={css.header}>{name}</h3>
             <div className={css['price-data']}>

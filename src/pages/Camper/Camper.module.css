@@ -25,8 +25,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 28px;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery {
+    justify-content: space-between;
+  }
 }
 
 .photo-container {

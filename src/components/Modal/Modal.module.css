@@ -1,7 +1,34 @@
+.modal {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.content {
+  background-color: transparent;
+  border: transparent;
+  overflow-y: auto;
+}
+
 .close {
   position: fixed;
-  right: 100px;
-  top: 100px;
+  right: 32px;
+  top: 32px;
   width: 32px;
   height: 32px;
   cursor: pointer;
@@ -11,4 +38,18 @@
 .close:hover,
 .close:focus {
   color: #d84343;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+  }
+
+  .close {
+    right: 100px;
+    top: 100px;
+  }
 }

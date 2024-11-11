@@ -11,7 +11,7 @@ export const selectStyles = {
   control: styles => ({
     ...styles,
     position: 'relative',
-    width: 360,
+    width: '100%',
     minHeight: 56,
     borderRadius: 12,
     backgroundColor: 'transparent',

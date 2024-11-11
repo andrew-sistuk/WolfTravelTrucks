@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  width: 888px;
+  width: 100%;
 }
 
 .warning-message {
@@ -10,6 +10,12 @@
   font-weight: 500;
   line-height: 1.33;
   text-align: center;
-  min-width: 888px;
+  min-width: 100%;
   color: var(--button-hover);
+}
+
+@media screen and (min-width: 1440px) {
+  .list-cars {
+    width: 888px;
+  }
 }

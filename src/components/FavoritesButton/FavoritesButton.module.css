@@ -1,7 +1,7 @@
 .favorites {
   position: fixed;
-  right: 100px;
-  bottom: 100px;
+  right: 32px;
+  bottom: 32px;
   display: block;
   width: 70px;
   height: 70px;
@@ -33,4 +33,11 @@
   color: var(--button-hover);
   border: 1px solid var(--button-hover);
   z-index: 9999;
+}
+
+@media screen and (min-width: 768px) {
+  .favorites {
+    right: 100px;
+    bottom: 100px;
+  }
 }

@@ -2,6 +2,7 @@
   padding-top: 48px;
   padding-bottom: 48px;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   gap: 64px;
 }
@@ -35,4 +36,10 @@ button.load-more:hover,
 button.load-more:focus {
   background-color: transparent;
   border: 1px solid var(--button-hover);
+}
+
+@media screen and (min-width: 1440px) {
+  .catalog {
+    flex-wrap: nowrap;
+  }
 }

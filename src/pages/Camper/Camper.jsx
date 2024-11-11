@@ -37,7 +37,7 @@ export default function Camper() {
     setModal({
       isOpen: true,
       type: 'photo',
-      photo: photo,
+      data: photo,
     });
   }
 
